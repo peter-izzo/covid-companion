@@ -92,20 +92,20 @@ A React application that...
 |         └── robots.txt
 |    └── src
 |        └── components
+|               ├── AvatarBio.js
+|               ├── CardBtn.js (+)
 |               ├── Container.js
-|               ├── Navbar.js
+|               ├── **(ContinueBtn.js)**
+|               ├── CovidInfo.js
 |               ├── Footer.js
-|               ├── SearchBar.js
-|               ├── SearchResults.js
 |               ├── FriendCard.js
 |               ├── FriendCircle.js
-|               ├── CardBtn.js (+)
+|               ├── Navbar.js
 |               ├── ProfileBtn.js (profile footer btns)
-|               ├── (SubmitBtn.js)
-|               ├── (ContinueBtn.js)
-
-|               ├── ProfileFooter.js
 |               ├── Question.js
+|               ├── SearchBar.js
+|               ├── SearchResults.js
+|               ├── **(SubmitBtn.js)**
 |               ├──
 |               ├──
 |               ├──
@@ -121,22 +121,10 @@ A React application that...
 |               ├──── Questionnaire.js
 |               └──── SearchFriends.js
 |
-|               ├──
-|               ├──
-|               ├──
-|               ├──
-|               ├──
-|               ├──
-|               ├──
-│               └──
-│
 |        ├── App.js
 |        ├── index.js
 |        └── index.css
-|                       ├────
-|                       ├────
-|                       ├────
-|                       └────
+|
 ├── backend
 |       └── models
 │           └── dbUsers.js
