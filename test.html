@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/tachyons@4.12.0/css/tachyons.min.css"
+    />
+    <link rel="stylesheet" src="/test.css" />
+  </head>
+  <body>
+    <!--navigation fixed semi transparent-->
+    <header class="bg-black-90 fixed w-100 ph3 pv3 pv4-ns ph4-m ph5-l">
+      <nav class="f6 fw6 ttu tracked">
+        <a class="link dim white dib mr3" href="#" title="Home">Home</a>
+        <a class="link dim white dib mr3" href="#" title="About">Search</a>
+      </nav>
+    </header>
+
+    <!--header overview-->
+    <header class="sans-serif">
+      <div
+        class="cover bg-left bg-center-l"
+        style="background-image: url(http://mrmrs.github.io/photos/u/011.jpg)"
+      >
+        <div class="bg-black-80 pb5 pb6-m pb7-l">
+          <nav class="dt w-100 mw8 center">
+            <div class="dtc w2 v-mid pa3">
+              <a
+                href="/"
+                class="dib w2 h2 pa1 ba b--white-90 grow-large border-box"
+              >
+                <svg
+                  class="link white-90 hover-white"
+                  data-icon="skull"
+                  viewBox="0 0 32 32"
+                  style="fill: currentcolor"
+                >
+                  <title>skull icon</title>
+                  <path
+                    d="M16 0 C6 0 2 4 2 14 L2 22 L6 24 L6 30 L26 30 L26 24 L30 22 L30 14 C30 4 26 0 16 0 M9 12 A4.5 4.5 0 0 1 9 21 A4.5 4.5 0 0 1 9 12 M23 12 A4.5 4.5 0 0 1 23 21 A4.5 4.5 0 0 1 23 12"
+                  ></path>
+                </svg>
+              </a>
+            </div>
+          </nav>
+
+          <div class="tc-l mt4 mt5-m mt6-l ph3">
+            <h1 class="f2 f1-l fw2 white-90 mb0 lh-title">
+              Keep track of your COVID status and the places you've been
+            </h1>
+            <h2 class="fw1 f3 white-80 mt3 mb4">
+              When you change your status, your friends and the places you've
+              visited are automatically updated. By keeping everyone in the
+              loop, people can get tested faster and reduce the spread.
+            </h2>
+            <a
+              class="f6 no-underline grow dib v-mid bg-blue white ba b--blue ph3 pv2 mb3"
+              href="/"
+              >Sign In</a
+            >
+            <span class="dib v-mid ph3 white-70 mb3">or</span>
+            <a
+              class="f6 no-underline grow dib v-mid white ba b--white ph3 pv2 mb3"
+              href=""
+              >Sign Up</a
+            >
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!--Sign-In form-->
+    <main class="pa4 black-80">
+      <form class="measure center">
+        <fieldset id="sign_up" class="ba b--transparent ph0 mh0">
+          <legend class="f4 fw6 ph0 mh0">Sign In</legend>
+          <div class="mt3">
+            <label class="db fw6 lh-copy f6" for="email-address">Email</label>
+            <input
+              class="pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100"
+              type="email"
+              name="email-address"
+              id="email-address"
+            />
+          </div>
+          <div class="mv3">
+            <label class="db fw6 lh-copy f6" for="password">Password</label>
+            <input
+              class="b pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100"
+              type="password"
+              name="password"
+              id="password"
+            />
+          </div>
+          <label class="pa0 ma0 lh-copy f6 pointer"
+            ><input type="checkbox" /> Remember me</label
+          >
+        </fieldset>
+        <div class="">
+          <input
+            class="b ph3 pv2 input-reset ba b--black bg-transparent grow pointer f6 dib"
+            type="submit"
+            value="Sign in"
+          />
+        </div>
+        <div class="lh-copy mt3">
+          <a href="#0" class="f6 link dim black db">Sign up</a>
+          <a href="#0" class="f6 link dim black db">Forgot your password?</a>
+        </div>
+      </form>
+    </main>
+
+    <!--Sign-Up form-->
+    <article class="pa4 black-80">
+      <legend class="f4 fw6 ph0 mh0">Sign Up</legend>
+      <form action="sign-up_submit" method="get" accept-charset="utf-8">
+        <fieldset id="sign_up" class="ba b--transparent ph0 mh0">
+          <legend class="ph0 mh0 fw6 clip">Sign Up</legend>
+          <div class="mt3">
+            <label class="db fw4 lh-copy f6" for="email-address"
+              >Email address</label
+            >
+            <input
+              class="pa2 input-reset ba bg-transparent w-100 measure"
+              type="email"
+              name="email-address"
+              id="email-address"
+            />
+          </div>
+          <div class="mt3">
+            <label class="db fw4 lh-copy f6" for="password">Password</label>
+            <input
+              class="b pa2 input-reset ba bg-transparent"
+              type="password"
+              name="password"
+              id="password"
+            />
+          </div>
+        </fieldset>
+        <div class="mt3">
+          <input
+            class="b ph3 pv2 input-reset ba b--black bg-transparent grow pointer f6"
+            type="submit"
+            value="Sign Up"
+          />
+        </div>
+      </form>
+    </article>
+
+    <!--navigation option bar on profile - want on bottom-->
+    <nav class="db dt-l w-100 pa3 ph5-l bg-yellow">
+      <a
+        class="db dtc-l v-mid mid-gray link dim w-100 w-25-l tc tl-l mb2 mb0-l"
+        href="#"
+        title="Home"
+      >
+        <img
+          src="http://tachyons.io/img/logo.jpg"
+          class="dib w2 h2 br-100"
+          alt="Site Name"
+        />
+      </a>
+      <div class="db dtc-l v-mid w-100 w-75-l tc tr-l">
+        <a
+          class="link dim dark-gray f6 f5-l dib mr3 mr4-l"
+          href="#"
+          title="Home"
+          >Home</a
+        >
+        <a
+          class="link dim dark-gray f6 f5-l dib mr3 mr4-l"
+          href="#"
+          title="How it Works"
+          >Add place</a
+        >
+        <a
+          class="link dim dark-gray f6 f5-l dib mr3 mr4-l"
+          href="#"
+          title="Blog"
+          >Edit Profile</a
+        >
+        <a
+          class="link dim dark-gray f6 f5-l dib mr3 mr4-l"
+          href="#"
+          title="Press"
+          >Add to Circle</a
+        >
+      </div>
+    </nav>
+
+    <!--profile-->
+    <article class="mw6 center bg-white br3 pa4-ns mv3 ba b--black-10">
+      <!--profile info-->
+      <div class="tc">
+        <img
+          src="http://tachyons.io/img/avatar_1.jpg"
+          class="br-100 h4 w4 dib ba b--black-05 pa2"
+          title="Photo of a kitty staring at you"
+        />
+        <h1 class="f3 mb2">Mimi W.</h1>
+        <h2 class="f5 fw4 gray mt0">Age</h2>
+        <h2 class="f5 fw4 gray mt0">API for state positivity rate</h2>
+        <ul class="list pl0 ml0 center mw5 ba b--light-silver br3">
+          <li class="ph3 pv2 bb b--light-silver bg-red">Positive (+)</li>
+          <li class="ph3 pv2 bb b--light-silver bg-blue">
+            Quarantined (Day #/10)
+          </li>
+          <li class="ph3 pv2 bb b--light-silver bg-yellow">
+            Last Tested (mm/dd/yyyy)
+          </li>
+
+          <li class="ph3 pv2 bb b--light-silver bg-green">
+            Vaccinated (P/M/JJ)
+          </li>
+          <li class="ph3 pv2 bb b--light-silver bg-orange">
+            Risk Level (0-10)
+          </li>
+        </ul>
+        <ul class="list pl0">
+          <li class="pa3 pa4-ns bb b--black-10">
+            <b class="db f5 mb1">Health Conditions</b>
+            <span class="f6 db lh-copy measure">
+              Asthma, High-Blood-Pressure.</span
+            >
+          </li>
+        </ul>
+        Friends/ Close Contacts<!--friend list-->
+        <main class="mw5 center">
+          <article class="dt w-100 bb b--black-05 pb2 mt2" href="#0">
+            <div class="dtc w2 w3-ns v-mid">
+              <img
+                src="http://mrmrs.github.io/photos/p/2.jpg"
+                class="ba b--black-10 db br2 w2 w3-ns h2 h3-ns"
+              />
+            </div>
+            <div class="dtc v-mid pl3">
+              <h1 class="f6 f5-ns fw6 lh-title black mv0">Young Gatchell</h1>
+              <h2 class="f6 fw4 mt0 mb0 black-60">@yg</h2>
+            </div>
+            <div class="dtc v-mid">
+              <form class="w-100 tr">
+                <button
+                  class="f6 button-reset bg-white ba b--black-10 dim pointer pv1 black-60"
+                  type="submit"
+                >
+                  + Follow
+                </button>
+              </form>
+            </div>
+          </article>
+          <article class="dt w-100 bb b--black-05 pb2 mt2" href="#0">
+            <div class="dtc w2 w3-ns v-mid">
+              <img
+                src="http://mrmrs.github.io/photos/p/3.jpg"
+                class="ba b--black-10 db br2 w2 w3-ns h2 h3-ns"
+              />
+            </div>
+            <div class="dtc v-mid pl3">
+              <h1 class="f6 f5-ns fw6 lh-title black mv0">Arnoldo Degraff</h1>
+              <h2 class="f6 fw4 mt0 mb0 black-60">@99xx88randomhandle</h2>
+            </div>
+            <div class="dtc v-mid">
+              <form class="w-100 tr">
+                <button
+                  class="f6 button-reset bg-white ba b--black-10 dim pointer pv1 black-60"
+                  type="submit"
+                >
+                  + Follow
+                </button>
+              </form>
+            </div>
+          </article>
+          <article class="dt w-100 bb b--black-05 pb2 mt2" href="#0">
+            <div class="dtc w2 w3-ns v-mid">
+              <img
+                src="http://mrmrs.github.io/photos/p/4.jpg"
+                class="ba b--black-10 db br2 w2 w3-ns h2 h3-ns"
+              />
+            </div>
+            <div class="dtc v-mid pl3">
+              <h1 class="f6 f5-ns fw6 lh-title black mv0">Deirdre Lachance</h1>
+              <h2 class="f6 fw4 mt0 mb0 black-60">@favfavfav</h2>
+            </div>
+            <div class="dtc v-mid">
+              <form class="w-100 tr">
+                <button
+                  class="f6 button-reset bg-white ba b--black-10 dim pointer pv1 black-60"
+                  type="submit"
+                >
+                  + Follow
+                </button>
+              </form>
+            </div>
+          </article>
+          <article class="dt w-100 bb b--black-05 pb2 mt2" href="#0">
+            <div class="dtc w2 w3-ns v-mid">
+              <img
+                src="http://mrmrs.github.io/photos/p/5.jpg"
+                class="ba b--black-10 db br2 w2 w3-ns h2 h3-ns"
+              />
+            </div>
+            <div class="dtc v-mid pl3">
+              <h1 class="f6 f5-ns fw6 lh-title black mv0">Frederic Starner</h1>
+              <h2 class="f6 fw4 mt0 mb0 black-60">@hungryhippofanatic</h2>
+            </div>
+            <div class="dtc v-mid">
+              <form class="w-100 tr">
+                <button
+                  class="f6 button-reset bg-white ba b--black-10 dim pointer pv1 black-60"
+                  type="submit"
+                >
+                  + Follow
+                </button>
+              </form>
+            </div>
+          </article>
+          <article class="dt w-100 bb b--black-05 pb2 mt2" href="#0">
+            <div class="dtc w2 w3-ns v-mid">
+              <img
+                src="http://mrmrs.github.io/photos/p/6.jpg"
+                class="ba b--black-10 db br2 w2 w3-ns h2 h3-ns"
+              />
+            </div>
+            <div class="dtc v-mid pl3">
+              <h1 class="f6 f5-ns fw6 lh-title black mv0">Cleveland Ridout</h1>
+              <h2 class="f6 fw4 mt0 mb0 black-60">@purethinking</h2>
+            </div>
+            <div class="dtc v-mid">
+              <form class="w-100 tr">
+                <button
+                  class="f6 button-reset bg-white ba b--black-10 dim pointer pv1 black-60"
+                  type="submit"
+                >
+                  + Follow
+                </button>
+              </form>
+            </div>
+          </article>
+          <article class="dt w-100 bb b--black-05 pb2 mt2" href="#0">
+            <div class="dtc w2 w3-ns v-mid">
+              <img
+                src="http://mrmrs.github.io/photos/p/7.jpg"
+                class="ba b--black-10 db br2 w2 w3-ns h2 h3-ns"
+              />
+            </div>
+            <div class="dtc v-mid pl3">
+              <h1 class="f6 f5-ns fw6 lh-title black mv0">Leticia Fearon</h1>
+              <h2 class="f6 fw4 mt0 mb0 black-60">@retrofeels</h2>
+            </div>
+            <div class="dtc v-mid">
+              <form class="w-100 tr">
+                <button
+                  class="f6 button-reset bg-white ba b--black-10 dim pointer pv1 black-60"
+                  type="submit"
+                >
+                  + Follow
+                </button>
+              </form>
+            </div>
+          </article>
+          <article class="dt w-100 bb b--black-05 pb2 mt2" href="#0">
+            <div class="dtc w2 w3-ns v-mid">
+              <img
+                src="http://mrmrs.github.io/photos/p/10.jpg"
+                class="ba b--black-10 db br2 w2 w3-ns h2 h3-ns"
+              />
+            </div>
+            <div class="dtc v-mid pl3">
+              <h1 class="f6 f5-ns fw6 lh-title black mv0">Ahmad Backer</h1>
+              <h2 class="f6 fw4 mt0 mb0 black-60">@ahmadBB</h2>
+            </div>
+            <div class="dtc v-mid">
+              <form class="w-100 tr">
+                <button
+                  class="f6 button-reset bg-white ba b--black-10 dim pointer pv1 black-60"
+                  type="submit"
+                >
+                  + Follow
+                </button>
+              </form>
+            </div>
+          </article>
+          <article class="dt w-100 bb b--black-05 pb2 mt2" href="#0">
+            <div class="dtc w2 w3-ns v-mid">
+              <img
+                src="http://mrmrs.github.io/photos/p/11.jpg"
+                class="ba b--black-10 db br2 w2 w3-ns h2 h3-ns"
+              />
+            </div>
+            <div class="dtc v-mid pl3">
+              <h1 class="f6 f5-ns fw6 lh-title black mv0">Carlie Noakes</h1>
+              <h2 class="f6 fw4 mt0 mb0 black-60">@carnoakes99</h2>
+            </div>
+            <div class="dtc v-mid">
+              <form class="w-100 tr">
+                <button
+                  class="f6 button-reset bg-white ba b--black-10 dim pointer pv1 black-60"
+                  type="submit"
+                >
+                  + Follow
+                </button>
+              </form>
+            </div>
+          </article>
+        </main>
+      </div>
+    </article>
+
+    <!-- business list
+    <main class="pl2 mw6 center">
+      <article class="mt2">
+        <a class="link dt w-100 bb b--black-10 dim blue" href="#0">
+          <div class="dtc w3">
+            <img
+              src="http://mrmrs.github.io/images/0010.jpg"
+              class="db w-100"
+            />
+          </div>
+          <div class="dtc v-top pl2">
+            <h1 class="f6 f5-ns fw6 lh-title black mv0">
+              A History of Visual Communication (Geschichte der visuellen
+              Kommunikation)
+            </h1>
+            <h2 class="f6 fw4 mt2 mb0 black-60">Josef Müller-Brockmann</h2>
+            <dl class="mt2 f6">
+              <dt class="clip">Price</dt>
+              <dd class="ml0">$15.00</dd>
+            </dl>
+          </div>
+          <div class="ph3">
+            <button class="f6 link dim ba ph3 pv2 mb2 dib bg-navy white">
+              +
+            </button>
+          </div>
+        </a>
+      </article>
+
+      <article class="mt2">
+        <a class="link dt w-100 bb b--black-10 dim blue" href="#0">
+          <div class="dtc w3">
+            <img
+              src="http://mrmrs.github.io/images/0010.jpg"
+              class="db w-100"
+            />
+          </div>
+          <div class="dtc v-top pl2">
+            <h1 class="f6 f5-ns fw6 lh-title black mv0">
+              A History of Visual Communication (Geschichte der visuellen
+              Kommunikation)
+            </h1>
+            <h2 class="f6 fw4 mt2 mb0 black-60">Josef Müller-Brockmann</h2>
+            <dl class="mt2 f6">
+              <dt class="clip">Price</dt>
+              <dd class="ml0">$15.00</dd>
+            </dl>
+          </div>
+          <div class="ph3">
+            <button class="f6 link dim ba ph3 pv2 mb2 dib bg-navy white">
+              +
+            </button>
+          </div>
+        </a>
+      </article>
+    </main> -->
+
+    <!--Sign-up form questions-->
+    <div class="pa2">
+      <div class="overflow-auto">
+        <table class="f6 w-100 mw8 center" cellspacing="3">
+          <thead>
+            <tr class="stripe-dark">
+              <th class="fw6 tl pa3 bg-white">Question</th>
+              <th class="fw6 tl pa3 bg-white">Yes</th>
+              <th class="fw6 tl pa3 bg-white">No</th>
+            </tr>
+          </thead>
+          <tbody class="lh-copy">
+            <tr class="stripe-dark">
+              <td class="pa3 w-100">What is your Covid status?</td>
+              <td class="pa3 w-100">
+                <input
+                  class="mr3 w-100"
+                  type="radio"
+                  id="positive"
+                  value="positive"
+                />
+              </td>
+              <td class="pa3">
+                <input
+                  class="mr3 w-100"
+                  type="radio"
+                  id="negative"
+                  value="negative"
+                />
+              </td>
+            </tr>
+            <tr class="stripe-dark">
+              <td class="pa3">Are you in quarantine?</td>
+              <td class="pa3 w-100">
+                <input
+                  class="mr4 w-100"
+                  type="radio"
+                  id="positive"
+                  value="positive"
+                />
+              </td>
+              <td class="pa2">
+                <input
+                  class="mr2 w-100"
+                  type="radio"
+                  id="negative"
+                  value="negative"
+                />
+              </td>
+            </tr>
+            <tr class="stripe-dark">
+              <td class="pa3">Have you been tested?</td>
+              <td class="pa3 w-100">
+                <input
+                  class="mr4 w-100"
+                  type="radio"
+                  id="positive"
+                  value="positive"
+                />
+              </td>
+              <td class="pa2">
+                <input
+                  class="mr2 w-100"
+                  type="radio"
+                  id="negative"
+                  value="negative"
+                />
+              </td>
+            </tr>
+            <tr class="stripe-dark">
+              <td class="pa3">Have you been vaccinated?</td>
+              <td class="pa3 w-100">
+                <input
+                  class="mr4 w-100"
+                  type="radio"
+                  id="positive"
+                  value="positive"
+                />
+              </td>
+              <td class="pa2">
+                <input
+                  class="mr2 w-100"
+                  type="radio"
+                  id="negative"
+                  value="negative"
+                />
+              </td>
+            </tr>
+            <tr class="stripe-dark">
+              <td class="pa3">Do you have any health conditions?</td>
+              <td class="pa3 w-100">
+                <input
+                  class="mr4 w-100"
+                  type="radio"
+                  id="positive"
+                  value="positive"
+                />
+              </td>
+              <td class="pa2">
+                <input
+                  class="mr2 w-100"
+                  type="radio"
+                  id="negative"
+                  value="negative"
+                />
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!--footer-->
+    <footer class="pv4 ph3 ph5-m ph6-l mid-gray">
+      <small class="f6 db tc"
+        >© 2021 <b class="ttu">COVID Companion</b>., All Rights Reserved</small
+      >
+      <div class="tc mt3">
+        <a
+          href="/language/"
+          title="Language"
+          class="f6 dib ph2 link mid-gray dim"
+          >Language</a
+        >
+        <a href="/terms/" title="Terms" class="f6 dib ph2 link mid-gray dim"
+          >Terms of Use</a
+        >
+        <a href="/privacy/" title="Privacy" class="f6 dib ph2 link mid-gray dim"
+          >Privacy</a
+        >
+      </div>
+    </footer>
+  </body>
+</html>
