@@ -8,11 +8,18 @@ import Questionnaire from "./pages/Questionnaire";
 import Profile from "./pages/Profile";
 import SearchFriends from "./pages/SearchFriends";
 
-const App = () => (
-  <div>
-    <AmplifySignOut />
-    My App
-  </div>
-);
+const App = () => {
+  const handleClick = async() => {
+    console.log('click');
+    const results = await Auth.currentAuthenticatedUser();
+    console.log(results.attributes.sub);
+  }
+  return (
+    <div>
+      <AmplifySignOut />
+      My App <button onClick={handleClick}>Submit</button>
+    </div>
+  );
+};
 
 export default withAuthenticator(App);
