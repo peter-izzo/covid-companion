@@ -1,16 +1,17 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
+import "./navbar.css"
 
-function NavTabs() {
+function NavBar() {
     
   const location = useLocation();
 
   return (
-    <ul className="*">
+    <ul className="fixed-bottom-nav">
 
       <li className="*">
-        <Link to="/" className={location.pathname === "/" ? "nav-link active" : "nav-link"}>
-          Lorem Ipsum
+        <Link to="../index.js/" className={location.pathname === "../index.js/" ? "nav-link active" : "nav-link"}>
+          Home
         </Link>
       </li>
 
@@ -19,7 +20,7 @@ function NavTabs() {
           to="/"
           className={location.pathname === "/" ? "nav-link active" : "nav-link"}
         >
-          Lorem Ipsum
+          Circle
         </Link>
       </li>
 
@@ -28,7 +29,7 @@ function NavTabs() {
           to="/"
           className={location.pathname === "/" ? "nav-link active" : "nav-link"}
         >
-          Lorem Ipsum
+          Update
         </Link>
       </li>
 
@@ -37,21 +38,21 @@ function NavTabs() {
           to="/"
           className={location.pathname === "/" ? "nav-link active" : "nav-link"}
         >
-          Lorem Ipsum
+          Covid Status
         </Link>
       </li>
 
-      <li className="*">
+    {/*<li className="*">
         <Link
           to="/"
           className={location.pathname === "/" ? "nav-link active" : "nav-link"}
         >
           Lorem Ipsum
         </Link>
-      </li>
+      </li> */}
 
     </ul>
   );
 }
 
-export default NavTabs;
+export default NavBar;

@@ -1,0 +1,20 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-covidcompanion-dev-115026-authRole",
+      "UnauthRoleArn": "arn:aws:iam::728288735815:role/amplify-covidcompanion-dev-115026-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::728288735815:role/amplify-covidcompanion-dev-115026-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-covidcompanion-dev-115026-deployment",
+      "UnauthRoleName": "amplify-covidcompanion-dev-115026-unauthRole",
+      "StackName": "amplify-covidcompanion-dev-115026",
+      "StackId": "arn:aws:cloudformation:us-east-1:728288735815:stack/amplify-covidcompanion-dev-115026/f3e76170-9494-11eb-bb17-12a9cf5d803b",
+      "AmplifyAppId": "dqx7r3qu136h7"
+    },
+    "categories": {
+      "auth": {
+        "covidcompanion62844e92": {}
+      }
+    }
+  }
+}
