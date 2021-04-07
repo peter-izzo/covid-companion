@@ -7,6 +7,7 @@ import SignUp from "./pages/SignUp";
 import Questionnaire from "./pages/Questionnaire";
 import Profile from "./pages/Profile";
 import SearchFriends from "./pages/SearchFriends";
+import Amplify, { Auth } from 'aws-amplify';
 
 const App = () => {
   const handleClick = async() => {

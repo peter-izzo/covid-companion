@@ -1,7 +1,7 @@
 // import AvatarBio, CovidInfo, FriendList (=FriendCard x5), ProfileFooter
 
 import React from "react";
-import Container
-import AvatartBio
-import FriendCircle
-import CovidInfo
+import Container from "../components/Container"
+import AvatartBio from "../components/AvatarBio"
+import FriendCircle from "../components/FriendCircle"
+import CovidInfo from "../components/CovidInfo"
