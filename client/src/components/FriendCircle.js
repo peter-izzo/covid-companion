@@ -1,3 +1,7 @@
 import React from "react";
 
-export default 
+function FriendCircle () {
+
+};
+
+export default FriendCircle;
