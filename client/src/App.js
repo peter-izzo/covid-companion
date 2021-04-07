@@ -1,4 +1,5 @@
 import React from "react";
+import Amplify, { Auth } from "aws-amplify";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import { withAuthenticator, AmplifySignOut } from "@aws-amplify/ui-react";
 import Home from "./pages/Home-About";
@@ -9,11 +10,11 @@ import Profile from "./pages/Profile";
 import SearchFriends from "./pages/SearchFriends";
 
 const App = () => {
-  const handleClick = async() => {
-    console.log('click');
+  const handleClick = async () => {
+    console.log("click");
     const results = await Auth.currentAuthenticatedUser();
     console.log(results.attributes.sub);
-  }
+  };
   return (
     <div>
       <AmplifySignOut />
