@@ -171,6 +171,7 @@ A React application that...
 - [Chronic Respiratory Diseases](https://www.google.com/search?q=chronic+respiratory+diseases&rlz=1C5CHFA_enUS728US728&sxsrf=ALeKk038PWoPm9zdjnsDmriiMwOHRUmyOw%3A1617754745451&ei=efpsYNKBG8G9ggfKjo-4CA&oq=chronic+respiratory+diseases&gs_lcp=Cgdnd3Mtd2l6EAMyAggAMgIIADICCAAyAggAMgIIADICCAAyAggAMgIIADICCAA6BwgjELADECc6BwgAEEcQsAM6BwgAELADEEM6BwgAELEDEEM6BAgAEEM6BwgAEIcCEBRQgIQBWMeSAWDpmgFoA3ACeACAAc8KiAGNEJIBBzYuMi43LTGYAQCgAQGqAQdnd3Mtd2l6yAEKwAEB&sclient=gws-wiz&ved=0ahUKEwiSor6H7urvAhXBnuAKHUrHA4cQ4dUDCA0&uact=5)
 - [Cardiovascular Diseases](https://www.google.com/search?q=cardiovascular+diseases&rlz=1C5CHFA_enUS728US728&oq=cardiovascular+diseases&aqs=chrome..69i57j0l2j0i20i263j0l3j0i20i263j0l2.3698j0j7&sourceid=chrome&ie=UTF-8)
 - [Chronic Renal Diseases](https://www.google.com/search?q=chronic+renal+diseiases&rlz=1C5CHFA_enUS728US728&oq=chronic+renal+diseiases&aqs=chrome..69i57j0i13j0i10i22i30l2j0i5i10i13i30j0i5i13i30j0i8i10i13i30j0i8i13i30l3.3775j0j7&sourceid=chrome&ie=UTF-8)
+- [Covid Pandemic Mortality Risk Estimator](https://www.economist.com/graphic-detail/covid-pandemic-mortality-risk-estimator)
 
 ## Contributors
 
