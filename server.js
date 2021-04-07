@@ -1,11 +1,12 @@
+import dotenv from "dotenv";
+dotenv.config();
 import express from "express";
 import mongoose from "mongoose";
 
 // App Config
 const app = express();
 const port = process.env.PORT || 3000;
-const connection_url =
-  "mongodb+srv://admin:13umYzqHo5zsxCJF@cluster0.vzmrq.mongodb.net/covidcompaniondb?retryWrites=true&w=majority";
+const connection_url = process.env.MONGODB_STRING;
 
 // Middlewares
 

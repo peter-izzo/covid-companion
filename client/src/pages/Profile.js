@@ -2,6 +2,6 @@
 
 import React from "react";
 import Container from "../components/Container"
-import AvatartBio from "../components/AvatarBio"
+import AvatarBio from "../components/AvatarBio"
 import FriendCircle from "../components/FriendCircle"
 import CovidInfo from "../components/CovidInfo"
