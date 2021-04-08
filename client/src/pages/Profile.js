@@ -1,4 +1,4 @@
-// import AvatarBio, CovidInfo, FriendList (=FriendCard x5), ProfileFooter
+// import AvatarBio, CovidInfo, FriendList (=FriendCard x5)
 
 import React from "react";
 import Container
