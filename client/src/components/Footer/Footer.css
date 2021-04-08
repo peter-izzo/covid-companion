@@ -1,0 +1,13 @@
+.Horizontal-List {
+    display: flex;
+    align-items: stretch; 
+    justify-content: space-between;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+.Horizontal-List-Item {
+    display: block;
+    flex: 0 1 auto;
+    list-style-type: none;
+}
