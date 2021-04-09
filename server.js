@@ -1,5 +1,4 @@
-const express = require("express");
-const mongoose = require("mongoose");
+
 import dotenv from "dotenv";
 dotenv.config();
 import express from "express";
@@ -8,6 +7,7 @@ import mongoose from "mongoose";
 // App Config
 const PORT = process.env.PORT || 3000;
 const app = express();
+
 
 // Middleware
 app.use(express.urlencoded({ extended: true }));
@@ -20,6 +20,7 @@ if (process.env.NODE_ENV === "production") {
 // DB config //@audit mongo link and connection_url
 const connection_url =
   "mongodb+srv://admin:13umYzqHo5zsxCJF@cluster0.vzmrq.mongodb.net/covidcompaniondb?retryWrites=true&w=majority";
+
 const port = process.env.PORT || 3000;
 const connection_url = process.env.MONGODB_STRING;
 
