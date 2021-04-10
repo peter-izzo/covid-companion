@@ -2,7 +2,7 @@ import dotenv from "dotenv";
 dotenv.config();
 import express from "express";
 import mongoose from "mongoose";
-//import quesSchema from "./models/quesSchema";
+import { User } from "./models/userModel.js";
 
 // App Config
 const app = express();
@@ -32,5 +32,6 @@ mongoose
 app.get("/", (req, res) => res.status(200).send("Hello World!"));
 
 // Need a post req to pass in data to the db //
+​
 // Listener
 app.listen(port, () => console.log(`listening on localhost: ${port}`));
