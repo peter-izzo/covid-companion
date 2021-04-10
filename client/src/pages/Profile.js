@@ -4,16 +4,24 @@ import React from "react";
 import AvatarBio from "../components/AvatarBio";
 import FriendCircle from "../components/FriendCircle";
 import CovidInfo from "../components/CovidInfo";
+import Navbar from "../components/Navbar/Navbar";
+import Footer from "../components/Footer/Footer";
 
 function Profile() {
   return (
-    <article className="mw6 center bg-white br3 pa4-ns mv3 ba b--black-10">
-      <div className="tc">
-        <AvatarBio />
-        <CovidInfo />
-        <FriendCircle />
+    <div>
+      <div>
+        <article className="mw6 center bg-white br3 pa4-ns mv3 ba b--black-10 pb7">
+          <div className="tc">
+            <AvatarBio />
+            <CovidInfo />
+            <FriendCircle />
+          </div>
+        </article>
+        <Navbar />
+        <Footer />
       </div>
-    </article>
+    </div>
   );
 }
 
