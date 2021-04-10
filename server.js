@@ -9,6 +9,11 @@ const app = express();
 const port = process.env.PORT || 3000;
 const connection_url = process.env.MONGODB_STRING;
 
+// Middlewares
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+
+// Connection to MongoDB
 mongoose
   .connect(
     process.env.MONGODB_URI ||
