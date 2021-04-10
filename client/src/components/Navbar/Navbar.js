@@ -7,7 +7,7 @@ function NavBar() {
   const location = useLocation();
 
   return (
-    <ul className="fixed-bottom-nav">
+    <ul className="fixed-bottom-nav flex items-center list pl0">
 
       <li className="*">
         <Link to="../index.js/" className={location.pathname === "../index.js/" ? "nav-link active" : "nav-link"}>

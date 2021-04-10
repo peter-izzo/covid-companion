@@ -2,7 +2,6 @@ import React, { useReducer } from "react";
 import CardBtn from "./CardBtn";
 
 function FriendCard() {
-
   {
     /* @todo add loop to fill in cards with names*/
   }
