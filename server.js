@@ -2,8 +2,8 @@ import dotenv from "dotenv";
 dotenv.config();
 import express from "express";
 import mongoose from "mongoose";
-//import quesSchema from "./models/quesSchema";
-​
+import { User } from "./models/userModel.js";
+
 // App Config
 const app = express();
 const port = process.env.PORT || 3000;
