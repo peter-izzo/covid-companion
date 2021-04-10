@@ -1,5 +1,9 @@
 .fixed-bottom-nav {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 }
+
+/* a:link {
+  color: white;
+} */
