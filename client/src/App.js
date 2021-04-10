@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 import { withAuthenticator, AmplifySignOut } from "@aws-amplify/ui-react";
 import Home from "./pages/Home-About";
 import SignIn from "./pages/SignIn";
+import Navbar from "./components/Navbar/Navbar"
 import SignUp from "./pages/SignUp";
 import Questionnaire from "./pages/Questionnaire";
 import Profile from "./pages/Profile";
@@ -17,6 +18,7 @@ const App = () => {
   };
   return (
     <div>
+      <Navbar />
       <AmplifySignOut />
       My App <button onClick={handleClick}>Submit</button>
     </div>
