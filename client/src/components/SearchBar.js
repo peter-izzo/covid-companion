@@ -1,6 +1,5 @@
 import React from "react";
 
-
 function SearchBar() {
   return (
     <div>
@@ -35,4 +34,3 @@ function SearchBar() {
   );
 }
 export default SearchBar;
-
