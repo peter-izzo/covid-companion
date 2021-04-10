@@ -34,7 +34,7 @@ function SignUp() {
         <div className="mt3">
           <input
             className="b ph3 pv2 input-reset ba b--black bg-transparent grow pointer f6"
-            type="submit"
+            type="submit" //@todo evenListener to verify everything and direct to questionnaire //
             value="Sign Up"
           />
         </div>

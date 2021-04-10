@@ -1,5 +1,9 @@
 import React from "react";
+<<<<<<< HEAD
 import FriendCard from "./FriendCard";
+=======
+import FriendCard from "../components/FriendCard";
+>>>>>>> ab8e2842b4df4acafe2ee2d8373757c5777f8ea6
 
 function SearchResults() {
   return (
