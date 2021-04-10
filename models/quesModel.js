@@ -13,4 +13,4 @@ const quesSchema = mongoose.Schema({
   riskLevel: { type: String, required: true },
 });
 
-export default mongoose.model("questions", quesSchema);
+module.exports = mongoose.model("questions", quesSchema);
