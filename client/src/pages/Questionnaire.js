@@ -1,9 +1,6 @@
-// import React from "react";
+import React from "react";
 
-// function Questionnaire() {
-//     return (
-
-
-//     )
-// }
-
+function Questionnaire() {
+  return <div>Hello World</div>;
+}
+export default Questionnaire;

@@ -180,7 +180,7 @@ A React application that...
 [Cris Franco]()
 [Julie Ann Iwinski]()
 [Pete Izzo](https://github.com/peter-izzo)
-[Danny Smooke]()
+[Danny Smooke](https://github.com/dsmooke)
 
 ## License
 

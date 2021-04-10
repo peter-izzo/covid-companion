@@ -2,10 +2,22 @@ import dotenv from "dotenv";
 dotenv.config();
 import express from "express";
 import mongoose from "mongoose";
+<<<<<<< HEAD
 //import quesSchema from "./models/quesSchema";
+=======
+import quesSchema from "./models/quesSchema";
+>>>>>>> main
 ​
 // App Config
 const app = express();
+<<<<<<< HEAD
+=======
+
+// DB config //@audit mongo link and connection_url
+const connection_url =
+  "mongodb+srv://admin:13umYzqHo5zsxCJF@cluster0.vzmrq.mongodb.net/covidcompaniondb?retryWrites=true&w=majority";
+​
+>>>>>>> main
 const port = process.env.PORT || 3000;
 const connection_url = process.env.MONGODB_STRING;
 ​
