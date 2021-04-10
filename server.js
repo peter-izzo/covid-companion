@@ -2,7 +2,7 @@ import dotenv from "dotenv";
 dotenv.config();
 import express from "express";
 import mongoose from "mongoose";
-import quesModel from "./models/quesModel";
+import quesSchema from "./models/quesSchema";
 
 // App Config
 const PORT = process.env.PORT || 3000;
