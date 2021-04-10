@@ -17,7 +17,7 @@ const questions = [
 
   {
     name: "quarantineDay",
-    type: "number",
+    type: "select",
     prompt: "What day of quarantine are you in?",
     answers: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14],
     when: (questions) => questions.inQuarantine === "Yes",

@@ -8,11 +8,11 @@ import { User } from "./models/userModel.js";
 const app = express();
 const port = process.env.PORT || 3000;
 const connection_url = process.env.MONGODB_STRING;
-
+​
 // Middlewares
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-
+​
 // Connection to MongoDB
 mongoose
   .connect(
@@ -27,12 +27,11 @@ mongoose
   )
   .then(() => console.log("   *** Connected to Database ***"))
   .catch((err) => console.log(err));
-
+​
 // API Endpoints
 app.get("/", (req, res) => res.status(200).send("Hello World!"));
-
+​
 // Need a post req to pass in data to the db //
-app.post("/questions/post", (req, res) => {});
-
+​
 // Listener
 app.listen(port, () => console.log(`listening on localhost: ${port}`));
