@@ -14,7 +14,11 @@ const userSchema = mongoose.Schema({
   vaccinated: { type: Boolean, required: true },
   vaccineCo: { type: String, required: true },
   riskLevel: { type: String, required: true },
-  friends: [{ type: ObjectId, ref: "User" }],
+  friends: [{ type: Object, ref: "User" }],
 });
 
-exports.User = mongoose.model("User", userSchema);
+// exports.User = mongoose.model("User", userSchema);
+
+const User = mongoose.model('User', userSchema);
+
+export default User;
