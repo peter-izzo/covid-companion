@@ -2,7 +2,10 @@ import dotenv from "dotenv";
 dotenv.config();
 import express from "express";
 import mongoose from "mongoose";
-import { User } from "./models/userModel.js";
+import bodyParser from 'body-parser';
+// import { User } from "./models/userModel.js";
+
+import postRoutes from './routes/posts.js';
 
 //App Config
 const app = express();
