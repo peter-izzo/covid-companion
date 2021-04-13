@@ -2,15 +2,18 @@ import dotenv from "dotenv";
 dotenv.config();
 import express from "express";
 import mongoose from "mongoose";
-//import quesSchema from "./models/quesSchema";
+import bodyParser from 'body-parser';
+// import { User } from "./models/userModel.js";
+
+import postRoutes from './routes/posts.js';
 
 // App Config
-const PORT = process.env.PORT || 3000;
 const app = express();
 const port = process.env.PORT || 3000;
 const connection_url = process.env.MONGODB_STRING;
 
 // Middlewares
+app.use('/posts', postRoutes);
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
