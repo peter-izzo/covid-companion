@@ -1,6 +1,6 @@
 import React from "react";
 
-function SearchBar() {
+function SearchBar({searchTerm, onChange}) {
   return (
     <div>
       <div className="pa4-l">
@@ -18,8 +18,9 @@ function SearchBar() {
                 placeholder="Adam Smith"
                 type="text"
                 name="friend-name"
-                value=""
+                value= {searchTerm}
                 id="friend-name"
+                onChange= {onChange}
               />
               <input
                 className="f6 f5-l button-reset fl pv3 tc bn bg-animate bg-black-70 hover-bg-black white pointer w-100 w-25-m w-20-l br2-ns br--right-ns"
