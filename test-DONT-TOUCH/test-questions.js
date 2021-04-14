@@ -67,17 +67,6 @@ const questions = [
   },
 ];
 
-function Questions() {
-  return (
-    <div></div>
-    // if (questions[1].answers === "Positive (+)") {
-    //     return questions[2];
-    // } else if (questions[1].answers === "Negative (-)") {
-    //     return questions[4];
-    // }
-  );
-}
-
 export default Questions;
 
 // {
