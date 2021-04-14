@@ -1,8 +1,9 @@
 import React from "react";
+import "../index.css"
 
 function AvatarBio() {
   return (
-    <div className="tc pa4">
+    <div className="tc pa4 bio">
       <img
         src="http://tachyons.io/img/logo.jpg"
         className="br-100 pa1 ba b--black-10 h5 w5"

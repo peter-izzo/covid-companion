@@ -4,6 +4,11 @@
   width: 100%;
 }
 
-/* a:link {
-  color: white;
-} */
+
+@media (min-width: 1025px)  {
+  .fixed-bottom-nav {
+   top: 0;
+   height: 50px;
+  }
+}
+
