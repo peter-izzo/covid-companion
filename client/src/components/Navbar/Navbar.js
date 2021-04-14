@@ -6,12 +6,6 @@ function NavBar() {
   const location = useLocation();
 
   return (
-<<<<<<< HEAD
-    <ul className="fixed-bottom-nav flex items-center list pl0">
-
-      <li className="*">
-        <Link to="../index.js/" className={location.pathname === "../index.js/" ? "nav-link active" : "nav-link"}>
-=======
     <ul
       className="fixed-bottom-nav flex justify-center list pl0 pv3 mv0 fw6"
       style={{ backgroundColor: "blue" }}
@@ -27,7 +21,6 @@ function NavBar() {
             "link dim white")
           }
         >
->>>>>>> ab8e2842b4df4acafe2ee2d8373757c5777f8ea6
           Home
         </Link>
       </li>
