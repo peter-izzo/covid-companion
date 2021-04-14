@@ -2,10 +2,10 @@ import dotenv from "dotenv";
 dotenv.config();
 import express from "express";
 import mongoose from "mongoose";
-import bodyParser from 'body-parser';
-// import { User } from "./models/userModel.js";
+import bodyParser from "body-parser";
+import User from "./models/User.js";
 
-import postRoutes from './routes/posts.js';
+//import postRoutes from "./routes/posts.js";
 
 // App Config
 const app = express();
@@ -13,7 +13,7 @@ const port = process.env.PORT || 3000;
 const connection_url = process.env.MONGODB_STRING;
 
 // Middlewares
-app.use('/posts', postRoutes);
+//app.use("/posts", postRoutes);
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
@@ -32,11 +32,52 @@ mongoose
   .then(() => console.log("   *** Connected to Database ***"))
   .catch((err) => console.log(err));
 
-// API Endpoints
-app.get("/", (req, res) => res.status(200).send("Hello World!"));
+app.get("/", (req, res) => {
+  User.find((err, users) => {
+    if (err) {
+      console.log(err);
+    } else {
+      res.json(users);
+    }
+  });
+});
 
-// Need a post req to pass in data to the db //
-app.post("/questions/post", (req, res) => {});
+app.post("/create", (req, res) => {
+  const user = new User(req.body);
+  user
+    .save()
+    .then((user) => {
+      res.json(user);
+    })
+    .catch((err) => {
+      res.status(500).send(err.message);
+    });
+});
+
+app.get("/:id", (req, res) => {
+  const id = req.params.id;
+  User.findById(id, (err, user) => {
+    res.json(user);
+  });
+});
+
+app.post("/:id", (req, res) => {
+  const id = req.params.id;
+  User.findById(id, (err, user) => {
+    if (!user) {
+      res.status(404).send("User not found");
+    } else {
+      user.text = req.body.text;
+
+      user
+        .save()
+        .then((user) => {
+          res.json(user);
+        })
+        .catch((err) => res.status(500).send(err.message));
+    }
+  });
+});
 
 // Listener
 app.listen(port, () => console.log(`listening on localhost: ${port}`));
