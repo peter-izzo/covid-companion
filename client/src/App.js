@@ -1,6 +1,13 @@
 import React from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import HomeAbout from "./pages/Home-About";
+import SignIn from "./pages/SignIn";
+// // import Navbar from "./components/Navbar/Navbar";
+import SignUp from "./pages/SignUp";
+import Questionnaire from "./pages/Questionnaire";
+import Profile from "./pages/Profile";
+// import SearchFriends from "./pages/SearchFriends";
+
 import "./index.css";
 // import Amplify, { Auth } from "aws-amplify";
 // import awsconfig from "./aws-exports";
@@ -10,13 +17,6 @@ import "./index.css";
 //   AmplifySignUp,
 // } from "@aws-amplify/ui-react";
 // Amplify.configure(awsconfig);
-
-import SignIn from "./pages/SignIn";
-// // import Navbar from "./components/Navbar/Navbar";
-import SignUp from "./pages/SignUp";
-import Questionnaire from "./pages/Questionnaire";
-import Profile from "./pages/Profile";
-// import SearchFriends from "./pages/SearchFriends";
 
 // Original Code 4/10/2021 @audit-issue app.js
 // const App = () => {
