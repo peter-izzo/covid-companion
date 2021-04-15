@@ -4,18 +4,20 @@ import express from "express";
 import mongoose from "mongoose";
 import bodyParser from "body-parser";
 import User from "./models/User.js";
+import cors from "cors";
 
 //import postRoutes from "./routes/posts.js";
 
 // App Config
 const app = express();
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 3001;
 const connection_url = process.env.MONGODB_STRING;
 
 // Middlewares
 //app.use("/posts", postRoutes);
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+app.use(cors());
 
 // Connection to MongoDB
 mongoose
@@ -43,7 +45,8 @@ app.get("/", (req, res) => {
 });
 
 app.post("/create", (req, res) => {
-  const user = new User(req.body);
+  console.log(req.body); //req.body.answers?
+  const user = new User(req.body); //req.body.answers?
   user
     .save()
     .then((user) => {
