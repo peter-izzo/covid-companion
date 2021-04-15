@@ -54,24 +54,24 @@ export default function Questionnaire() {
   }, [answers]);
 
   return (
-    <div className="Question">
+    <div className="Question pa3">
       <h1>Covid Questionnaire</h1>
-      <h2>Start answering to see some magic happen!</h2>
+      <h2>Answer the following questions about your Covid status: </h2>
       <form onSubmit={handleSubmit}>
         {questions.map((q) => {
           return (
-            <div style={{ marginBottom: "10px" }}>
-              <Question
-                data={answers}
-                name={q.name}
-                type={q.type}
-                prompt={q.prompt}
-                answers={q.answers}
-                when={q.when}
-                onChange={handleChange}
-                onHide={memoizedHandleHide}
-              />
-            </div>
+            // <div className="pa2 w-100" style={{ marginBottom: "10px" }}>
+            <Question
+              data={answers}
+              name={q.name}
+              type={q.type}
+              prompt={q.prompt}
+              answers={q.answers}
+              when={q.when}
+              onChange={handleChange}
+              onHide={memoizedHandleHide}
+            />
+            // </div>
           );
         })}
         {answers.sellYourSoul && <button type="submit">Submit</button>}
