@@ -1,19 +1,29 @@
 import mongoose from "mongoose";
-const db = require("./models/User.js");
+import axios from "axios";
+// const db = require("./models/User.js");
 
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/covidcompaniondb");
+mongoose.connect("mongodb://localhost:27017/covidcompaniondb");
 
-const userSeed = 
-  {   //userId: 
+const userSeed = {
+  //userId:
   name: "cris",
-  location: "stamford"
-  //covidStatus: 
-//   inQuarantine: 
-//   quarantineDay: 
-//   tested: 
-//   testDate: 
-//   vaccinated: 
-//   vaccineCo: 
-//   riskLevel: 
-    
-  },
+  location: "stamford",
+  //covidStatus:
+  //   inQuarantine:
+  //   quarantineDay:
+  //   tested:
+  //   testDate:
+  //   vaccinated:
+  //   vaccineCo:
+  //   riskLevel:
+};
+
+const init = async () => {
+  try {
+    axios.post("/create", userSeed);
+  } catch (err) {
+    console.log(err);
+  }
+};
+
+init();
