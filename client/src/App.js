@@ -1,6 +1,13 @@
 import React from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import HomeAbout from "./pages/Home-About";
+import SignIn from "./pages/SignIn";
+// // import Navbar from "./components/Navbar/Navbar";
+import SignUp from "./pages/SignUp";
+import Questionnaire from "./pages/Questionnaire";
+import Profile from "./pages/Profile";
+// import SearchFriends from "./pages/SearchFriends";
+
 import "./index.css";
 import Amplify, { Auth } from "aws-amplify";
 import awsconfig from "./aws-exports";
@@ -16,6 +23,7 @@ import Navbar from "./components/Navbar/Navbar";
 import SignUp from "./pages/SignUp";
 import Questionnaire from "./pages/Questionnaire";
 import Profile from "./pages/Profile";
+import SearchFriends from "./pages/SearchFriends";
 Amplify.configure(awsconfig);
 // import SearchFriends from "./pages/SearchFriends";
 
@@ -47,6 +55,7 @@ function App() {
         <Route exact path="/questionnaire" component={Questionnaire} />
         {/* <Route exact path="/editprofile" component={Questionnaire} /> */}
         <Route exact path="/profile" component={Profile} />
+        <Route exact path="/search" component={SearchFriends} />
         </AmplifyAuthenticator>
       </div>
     </Router>
