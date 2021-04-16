@@ -3,6 +3,7 @@ import {  Route, useHistory } from "react-router-dom";
 import HomeAbout from "./pages/Home-About";
 // // import Navbar from "./components/Navbar/Navbar";
 import SignUp from "./pages/SignUp";
+
 // import SearchFriends from "./pages/SearchFriends";
 
 import "./index.css";
