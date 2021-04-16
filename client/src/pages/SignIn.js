@@ -1,7 +1,17 @@
 // Sign-In Page
+import Auth from "@aws-amplify/auth";
+import axios from "axios";
 import React from "react";
 
 function SignIn() {
+  async function handleUser() {
+    const user = await Auth.currentAuthenticatedUser();
+    const data = {
+      id: user.attributes.sub,
+      covidStatus: "positive",
+    }
+    axios.post('localhost:3000/api', data)
+  }
   return (
     <main className="pa4 black-80">
       <form className="measure center">
