@@ -1,5 +1,6 @@
 // creates status bars depending on user input
 import React from "react";
+import "../index.css"
 
 function CovidInfo() {
   return (
@@ -23,7 +24,7 @@ function CovidInfo() {
       <ul className="list pl0">
         <li className="pa3 pa4-ns bb b--black-10">
           <b className="db f5 mb1">Health Conditions</b>
-          <span className="f6 db lh-copy measure">
+          <span className="f6 db center lh-copy measure">
             Asthma, High-Blood-Pressure.
           </span>
         </li>

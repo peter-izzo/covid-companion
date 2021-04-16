@@ -1,6 +1,17 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import "./navbar.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faHouseUser } from "@fortawesome/free-solid-svg-icons";
+import { faCircleNotch } from "@fortawesome/free-solid-svg-icons";
+import { faEdit } from "@fortawesome/free-solid-svg-icons";
+import { faVirus } from "@fortawesome/free-solid-svg-icons";
+
+//Font awesome icons
+const element = <FontAwesomeIcon icon={faHouseUser} />
+const elementb = <FontAwesomeIcon icon={faCircleNotch} />
+const elementc = <FontAwesomeIcon icon={faEdit} />
+const elementd = <FontAwesomeIcon icon={faVirus} /> 
 
 function NavBar() {
   const location = useLocation();
@@ -11,7 +22,7 @@ function NavBar() {
       style={{ backgroundColor: "blue" }}
     >
       <li className="ph3 link dim space white">
-        {/* @todo font awesome icons for navbar <i className="fas fa-house-user"></i> */}
+        
         <Link
           to="../index.js/"
           className={
@@ -21,11 +32,12 @@ function NavBar() {
             "link dim white")
           }
         >
-          Home
+          {element} Home
         </Link>
       </li>
 
       <li className="ph3">
+        
         <Link
           to="/"
           className={
@@ -33,11 +45,12 @@ function NavBar() {
             "link dim white")
           }
         >
-          Circle
+          {elementb} Circle
         </Link>
       </li>
 
       <li className="ph3">
+        
         <Link
           to="/"
           className={
@@ -45,11 +58,12 @@ function NavBar() {
             "link dim white")
           }
         >
-          Update
+          {elementc} Update
         </Link>
       </li>
 
       <li className="ph3">
+        
         <Link
           to="/"
           className={
@@ -57,7 +71,7 @@ function NavBar() {
             "link dim white")
           }
         >
-          Covid Status
+          {elementd} Covid Status
         </Link>
       </li>
 
