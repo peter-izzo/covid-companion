@@ -33,7 +33,7 @@ export const questions = [
   },
   {
     name: "testDate",
-    type: "Date",
+    type: "date",
     prompt: "When were you last tested?",
     answers: "",
     when: (questions) => questions.tested === "Yes",
