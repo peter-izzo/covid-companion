@@ -1,12 +1,24 @@
 import React from "react";
-import FriendCard from "../components/FriendCard";
+import Friend from "../components/Friend";
+
+// @todo populate profile with added friends
+// const friends =[];
 
 function FriendCircle() {
   return (
-    <main className="mw5 center">
-      <article className="dt w-100 bb b--black-05 pb2 mt2" href="#0">
-        <FriendCard />
-      </article>
+    <main
+      className="ml5 center pa3 shadow-3 br3"
+      style={{
+        backgroundColor: "#ffda1f",
+        margin: "20px",
+      }}
+    >
+      <h3 className="center">Friend Circle</h3>
+      <article
+        className="dt center w-100 bb b--black-05 pb2 mt2"
+        href="#0"
+      ></article>{" "}
+      <Friend />
     </main>
   );
 }
