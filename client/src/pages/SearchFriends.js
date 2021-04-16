@@ -3,20 +3,20 @@ import React from "react";
 import SearchBar from "../components/SearchBar";
 import SearchResults from "../components/SearchResults";
 import NavBar from "../components/Navbar/Navbar";
-import ReactDOM from "react-dom";
-import Friendcard from "../components/FriendCard";
 
 const users = [
   {
-    name: "george",
+    name: "George",
   },
   {
-    name: "lucy",
+    name: "Luna",
   },
   {
     name: "Hagrid",
     location: "connecticut",
   },
+  { name: "Hermione" },
+  { name: "Ginny" },
 ];
 
 function SearchFriends() {
