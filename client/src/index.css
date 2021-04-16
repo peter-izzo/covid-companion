@@ -1,15 +1,61 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+/* Colors based on user answers to covid questionnaire */
+.positive {
+  background-color: #ff0000;
+}
+
+.negative {
+  background-color: #808080;
+}
+
+.tested {
+  background-color: rgb(255, 255, 0);
+}
+
+.inQuarantine {
+  background-color: rgb(0, 119, 255);
+}
+
+.vaccinated {
+  background-color: rgb(0, 128, 0);
+}
+
+.riskLevel-6 {
+  background-color: rgb(124, 2, 2);
+}
+.riskLevel-5 {
+  background-color: rgb(255, 0, 0);
+}
+
+.riskLevel-4 {
+  background-color: rgb(230, 106, 4);
+}
+.riskLevel-3 {
+  background-color: rgb(255, 217, 0);
+}
+.riskLevel-2 {
+  background-color: rgb(255, 255, 0);
+}
+
+.riskLevel-1 {
+  background-color: rgb(176, 243, 52);
+}
+
+.riskLevel-0 {
+  background-color: rgb(0, 128, 0);
 }
 
 /*For Desktop view*/
@@ -20,11 +66,11 @@ code {
     max-width: 110rem;
     max-height: 100rem;
   }
-  
+
   /* .test2 {
     display: flex;
     align-items: center;
     /* justify-content: center; */
-    /* justify-content: space-evenly;
-  } */ 
+  /* justify-content: space-evenly;
+  } */
 }
