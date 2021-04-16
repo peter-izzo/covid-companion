@@ -29,11 +29,12 @@ export const questions = [
     answers: ["Yes", "No"],
     when: (questions) =>
       questions.covidStatus === "Negative (-)" ||
-      questions.inQuarantine === "No",
+      questions.inQuarantine === "No" ||
+      questions.quarantineDay,
   },
   {
     name: "testDate",
-    type: "Date",
+    type: "date",
     prompt: "When were you last tested?",
     answers: "",
     when: (questions) => questions.tested === "Yes",
@@ -43,8 +44,7 @@ export const questions = [
     type: "boolean",
     prompt: "Have you been vaccinated? (received at least one dose)",
     answers: ["Yes", "No"],
-    when: (questions) =>
-      questions.tested === "Yes" || questions.tested === "No",
+    when: (questions) => questions.testDate || questions.tested === "No",
   },
   {
     name: "vaccineCo",
@@ -66,17 +66,16 @@ export const questions = [
       "Cardiovascular diseases",
       "Chronic renal disease",
     ],
-    when: (questions) =>
-      questions.vaccineCo ||
-      questions.vaccinated === "No" ||
-      questions.vaccinated === "Yes",
+    when: (questions) => questions.vaccineCo || questions.vaccinated === "No",
   },
 
   {
     name: "sellYourSoul",
     type: "checkbox",
     prompt: "Ready to create profile?",
-    when: (questions) => questions.riskLevel,
+    when: (questions) =>
+      questions.riskLevel ||
+      questions.riskLevel === "No preexisting conditions",
   },
 ];
 

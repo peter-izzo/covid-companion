@@ -3,7 +3,7 @@ import { questions } from "../components/questions";
 import axios from "axios";
 
 import Question from "../components/Question";
-// import "./styles.css";
+import "../index.css";
 
 export default function Questionnaire() {
   // Create initial state object pf questions set to empty strings
@@ -54,27 +54,36 @@ export default function Questionnaire() {
   }, [answers]);
 
   return (
-    <div className="Question">
-      <h1>Covid Questionnaire</h1>
-      <h2>Start answering to see some magic happen!</h2>
-      <form onSubmit={handleSubmit}>
+    <div className="Question pa3">
+      <h1 className="pa3">Covid Questionnaire</h1>
+      <h2 className="pa3">
+        Answer the following questions about your Covid status:{" "}
+      </h2>
+      <form className="pa3" onSubmit={handleSubmit}>
         {questions.map((q) => {
           return (
-            <div style={{ marginBottom: "10px" }}>
-              <Question
-                data={answers}
-                name={q.name}
-                type={q.type}
-                prompt={q.prompt}
-                answers={q.answers}
-                when={q.when}
-                onChange={handleChange}
-                onHide={memoizedHandleHide}
-              />
-            </div>
+            <Question
+              data={answers}
+              name={q.name}
+              type={q.type}
+              prompt={q.prompt}
+              answers={q.answers}
+              when={q.when}
+              onChange={handleChange}
+              onHide={memoizedHandleHide}
+            />
           );
         })}
-        {answers.sellYourSoul && <button type="submit">Submit</button>}
+        {answers.sellYourSoul && (
+          <a
+            className="f6 link dim br1 ph3 pv2 mb2 dib white bg-dark-green"
+            href="/profile"
+            type="submit"
+            style={{ marginLeft: "10px" }}
+          >
+            Submit
+          </a>
+        )}
       </form>
     </div>
   );
