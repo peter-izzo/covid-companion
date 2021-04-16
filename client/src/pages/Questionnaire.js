@@ -1,14 +1,15 @@
 import { useState, useEffect, useCallback } from "react";
 import { questions } from "../components/questions";
+import { Auth } from 'aws-amplify';
 import axios from "axios";
 
 import Question from "../components/Question";
-// import "./styles.css";
+import "../index.css";
 
 export default function Questionnaire() {
   // Create initial state object pf questions set to empty strings
   const initialValue = () => {
-    const formQuestions = {};
+    const formQuestions = { name: "", location: "" };
 
     for (let q of questions) {
       formQuestions[q.name] = "";
@@ -35,12 +36,11 @@ export default function Questionnaire() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    // const user = await Auth.currentAuthenticedUser();
-    // const userId = user.attributes.sub;
-    // answers.userId = userId;
+    const user = await Auth.currentAuthenticatedUser();
+    const userId = user.attributes.sub;
+    answers.userId = userId;
 
-    // send data with userId
-    // axios.post("covidcompanion.com/api", answers);
+    axios.post("http://localhost:3001/create", answers);
     console.log(answers);
   };
 
@@ -54,27 +54,44 @@ export default function Questionnaire() {
   }, [answers]);
 
   return (
-    <div className="Question">
-      <h1>Covid Questionnaire</h1>
-      <h2>Start answering to see some magic happen!</h2>
-      <form onSubmit={handleSubmit}>
+
+    <div className="Question pa3">
+      <h1 className="pa3">Covid Questionnaire</h1>
+      <h2 className="pa3">Start answering to see some magic happen!</h2>
+      <form className="pa3"onSubmit={handleSubmit}>
+        <label htmlFor="name">
+          Name
+          <input type="text" name="name" onChange={handleChange} />
+        </label>
+        <label htmlFor="location">
+          Location
+          <input type="text" name="location" onChange={handleChange} />
+        </label>
+
         {questions.map((q) => {
           return (
-            <div style={{ marginBottom: "10px" }}>
-              <Question
-                data={answers}
-                name={q.name}
-                type={q.type}
-                prompt={q.prompt}
-                answers={q.answers}
-                when={q.when}
-                onChange={handleChange}
-                onHide={memoizedHandleHide}
-              />
-            </div>
+            <Question
+              data={answers}
+              name={q.name}
+              type={q.type}
+              prompt={q.prompt}
+              answers={q.answers}
+              when={q.when}
+              onChange={handleChange}
+              onHide={memoizedHandleHide}
+            />
           );
         })}
-        {answers.sellYourSoul && <button type="submit">Submit</button>}
+        {answers.sellYourSoul && (
+          <a
+            className="f6 link dim br1 ph3 pv2 mb2 dib white bg-dark-green"
+            href="/profile"
+            type="submit"
+            style={{ marginLeft: "10px" }}
+          >
+            Submit
+          </a>
+        )}
       </form>
     </div>
   );
