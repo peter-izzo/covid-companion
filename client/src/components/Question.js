@@ -37,7 +37,7 @@ const Question = ({
                 <>
                   <ol>
                     <input
-                      // className=" "
+                      // className="fw5"
                       // style={{ marginRight: "10px", marginLeft: "5px" }}
                       id={a}
                       type="radio"
@@ -46,7 +46,7 @@ const Question = ({
                       onChange={onChange}
                     />
                     <label
-                      // style={{ marginLeft: "-4px" }}
+                      style={{ marginLeft: "8px" }}
                       // cellSpacing="3"
                       htmlFor={a}
                     >
@@ -67,16 +67,18 @@ const Question = ({
             <>
               {/* <div className="ml3" style={{ marginRight: "4px" }}> */}
               {prompt}
-              <select
-                // className="ml2"
-                // style={{ marginLeft: "10px" }}
-                name={name}
-                onChange={onChange}
-              >
-                {answers.map((a) => (
-                  <option value={a}>{a}</option>
-                ))}
-              </select>
+              <ol>
+                <select
+                  // className="ml2"
+                  // style={{ marginLeft: "10px" }}
+                  name={name}
+                  onChange={onChange}
+                >
+                  {answers.map((a) => (
+                    <option value={a}>{a}</option>
+                  ))}
+                </select>
+              </ol>
               {/* </div> */}
             </>
           )}
@@ -89,13 +91,15 @@ const Question = ({
             <>
               {/* <div className="ml3" style={{ marginRight: "4px" }}> */}
               {prompt}
-              <input
-                type="date"
-                placeholder="mm/dd/yyyy"
-                name={name}
-                onChange={onChange}
-              />
-              {/* </div> */}
+              <ol>
+                <input
+                  type="date"
+                  placeholder="mm/dd/yyyy"
+                  name={name}
+                  onChange={onChange}
+                />
+                {/* </div> */}
+              </ol>
             </>
           )}
         </>

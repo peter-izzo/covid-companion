@@ -73,7 +73,9 @@ export const questions = [
     name: "sellYourSoul",
     type: "checkbox",
     prompt: "Ready to create profile?",
-    when: (questions) => questions.riskLevel,
+    when: (questions) =>
+      questions.riskLevel ||
+      questions.riskLevel === "No preexisting conditions",
   },
 ];
 

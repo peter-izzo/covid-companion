@@ -6,7 +6,7 @@ import SignIn from "./pages/SignIn";
 import SignUp from "./pages/SignUp";
 import Questionnaire from "./pages/Questionnaire";
 import Profile from "./pages/Profile";
-// import SearchFriends from "./pages/SearchFriends";
+import SearchFriends from "./pages/SearchFriends";
 
 import "./index.css";
 // import Amplify, { Auth } from "aws-amplify";
@@ -17,14 +17,6 @@ import "./index.css";
 //   AmplifySignUp,
 // } from "@aws-amplify/ui-react";
 // Amplify.configure(awsconfig);
-
-import SignIn from "./pages/SignIn";
-// // import Navbar from "./components/Navbar/Navbar";
-import SignUp from "./pages/SignUp";
-import Questionnaire from "./pages/Questionnaire";
-import Profile from "./pages/Profile";
-import SearchFriends from "./pages/SearchFriends";
-// import SearchFriends from "./pages/SearchFriends";
 
 // Original Code 4/10/2021 @audit-issue app.js
 // const App = () => {
