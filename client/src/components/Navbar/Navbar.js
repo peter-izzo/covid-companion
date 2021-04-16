@@ -38,9 +38,9 @@ function NavBar() {
       {/* Home link */}
       <li className=" f6  ph3">
         <Link
-          to="/home"
+          to="/profile"
           className={
-            (location.pathname === "/home" ? "nav-link active" : "nav-link",
+            (location.pathname === "/profile" ? "nav-link active" : "nav-link",
             "link dim white")
           }
         >
