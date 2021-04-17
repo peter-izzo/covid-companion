@@ -13,12 +13,8 @@ const app = express();
 const port = process.env.PORT || 3001;
 const connection_url = process.env.MONGODB_STRING;
 
-<<<<<<< HEAD
-//Middlewares
-=======
 // Middlewares
 //app.use("/posts", postRoutes);
->>>>>>> fccb0e432a1792e11af494c324419d5269dda19d
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(cors());
@@ -38,12 +34,6 @@ mongoose
   .then(() => console.log("   *** Connected to Database ***"))
   .catch((err) => console.log(err))
 
-<<<<<<< HEAD
-// API Endpoints
-app.get("/", (req,res) => res.status(200).send("Hello World!"));
-
-// Need a post req to pass in data to the db
-=======
 app.get("/", (req, res) => {
   User.find((err, users) => {
     if (err) {
@@ -91,7 +81,6 @@ app.post("/:id", (req, res) => {
     }
   });
 });
->>>>>>> fccb0e432a1792e11af494c324419d5269dda19d
 
 //Listener
 app.listen(port, () => console.log(`listening on localhost: ${port}`));
