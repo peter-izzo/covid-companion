@@ -3,88 +3,80 @@ import { Link, useLocation } from "react-router-dom";
 import "./navbar.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHouseUser } from "@fortawesome/free-solid-svg-icons";
-import { faCircleNotch } from "@fortawesome/free-solid-svg-icons";
-import { faEdit } from "@fortawesome/free-solid-svg-icons";
-import { faVirus } from "@fortawesome/free-solid-svg-icons";
+import { faSearchPlus } from "@fortawesome/free-solid-svg-icons";
+import { faViruses } from "@fortawesome/free-solid-svg-icons";
+// import { faMap } from "@fortawesome/free-solid-svg-icons";
 
 //Font awesome icons
-const element = <FontAwesomeIcon icon={faHouseUser} />
-const elementb = <FontAwesomeIcon icon={faCircleNotch} />
-const elementc = <FontAwesomeIcon icon={faEdit} />
-const elementd = <FontAwesomeIcon icon={faVirus} /> 
+const element = <FontAwesomeIcon icon={faHouseUser} className="f2 pv2" />;
+const elementb = <FontAwesomeIcon icon={faSearchPlus} className="f2 pv2" />;
+const elementc = <FontAwesomeIcon icon={faViruses} className="f2 pv2" />;
+// const elementd = <FontAwesomeIcon icon={faMap} />;
 
 function NavBar() {
   const location = useLocation();
 
   return (
     <ul
-      className="fixed-bottom-nav flex justify-center list pl0 pv3 mv0 fw6"
+      className="fixed-bottom-nav flex justify-center list pv2 mv0 fw6"
       style={{ backgroundColor: "blue" }}
+      id="navbar"
     >
-      <li className="ph3 link dim space white">
-        
+      {/* Add to Circle Link/Search for friends */}
+      <li className=" f6  ph3 ">
         <Link
-          to="../index.js/"
+          to="/search"
           className={
-            (location.pathname === "../index.js/"
+            (location.pathname === "/search" ? "nav-link active" : "nav-link",
+            "link dim white")
+          }
+        >
+          {elementb}
+          <label className="f6 tc">Search</label>
+        </Link>
+      </li>
+
+      {/* Home link */}
+      <li className=" f6  ph3">
+        <Link
+          to="/profile"
+          className={
+            (location.pathname === "/profile" ? "nav-link active" : "nav-link",
+            "link dim white")
+          }
+        >
+          {element}
+          <label className="f6 tc">Profile</label>
+        </Link>
+      </li>
+
+      {/* Update Profile/Covid Status Link */}
+      <li className="f6  ph3 ">
+        <Link
+          to="/questionnaire"
+          className={
+            (location.pathname === "/questionnaire"
               ? "nav-link active"
               : "nav-link",
             "link dim white")
           }
         >
-          {element} Home
+          {elementc}
+          <label className="f6 tc">Update</label>
         </Link>
       </li>
-
-      <li className="ph3">
-        
-        <Link
-          to="/"
-          className={
-            (location.pathname === "/" ? "nav-link active" : "nav-link",
-            "link dim white")
-          }
-        >
-          {elementb} Circle
-        </Link>
-      </li>
-
-      <li className="ph3">
-        
-        <Link
-          to="/"
-          className={
-            (location.pathname === "/" ? "nav-link active" : "nav-link",
-            "link dim white")
-          }
-        >
-          {elementc} Update
-        </Link>
-      </li>
-
-      <li className="ph3">
-        
-        <Link
-          to="/"
-          className={
-            (location.pathname === "/" ? "nav-link active" : "nav-link",
-            "link dim white")
-          }
-        >
-          {elementd} Covid Status
-        </Link>
-      </li>
-
-      {/*<li className="*">
-        <Link
-          to="/"
-          className={location.pathname === "/" ? "nav-link active" : "nav-link"}
-        >
-          Lorem Ipsum
-        </Link>
-      </li> */}
     </ul>
   );
 }
 
 export default NavBar;
+
+// style={{ marginRight: "0px", marginTop: "0px" }}
+/* within li for circle around icon and label style={{
+          backgroundColor: "green",
+          borderRadius: "60px",
+          marginRight: "50px",
+          marginLeft: "10px",
+          height: "80px",
+          width: "80px",
+        }}*/

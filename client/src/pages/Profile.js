@@ -7,10 +7,9 @@ import CovidInfo from "../components/CovidInfo";
 import Navbar from "../components/Navbar/Navbar";
 import Footer from "../components/Footer/Footer";
 
-
 function Profile() {
   return (
-    <div>
+    <div id="profile">
       <div>
         <article className="mw6 center bg-white br3 pa4-ns mv3 ba b--black-10 pb7 test">
           <div className="tc">
