@@ -160,11 +160,12 @@ A React application that...
 
 - Links to to the deployed application and the GitHub repository. Use this guide for deploying your application to Heroku if you need a reminder on how to deploy!
 
+## Installation
+
 ## Credits
 
 - [Miro]()
-- [Tachyon]()
-- [Passport]()
+- [Tachyon](http://tachyons.io/components/)
 - [Who's at higher risk of serious symptoms](https://www.mayoclinic.org/diseases-conditions/coronavirus/in-depth/coronavirus-who-is-at-risk/art-20483301)
 - [US COVID-19 Risk Level Based on Conditions](https://www.npr.org/sections/health-shots/2020/04/01/824874977/underlying-health-disparities-could-mean-coronavirus-hits-some-communities-harde)
 - [Common immunodeficiency diseases](https://www.google.com/search?q=common+immunodeficiency+diseases&rlz=1C5CHFA_enUS728US728&sxsrf=ALeKk02FGsMH2pKumokGimguNMjzBtUKtQ%3A1617756260267&ei=ZABtYI7lD6WKggejspDwBw&oq=immunocompromised+conditions+list&gs_lcp=Cgdnd3Mtd2l6EAEYBTIHCCMQsAMQJzIHCAAQRxCwAzIHCAAQRxCwAzIHCAAQRxCwAzIHCAAQRxCwAzIHCAAQRxCwAzIHCAAQRxCwAzIHCAAQRxCwAzIHCAAQRxCwAzIHCAAQsAMQQ1AAWABgjYoBaAFwAngAgAHhFIgB4RSSAQM5LTGYAQCqAQdnd3Mtd2l6yAEKwAEB&sclient=gws-wiz)
@@ -172,15 +173,20 @@ A React application that...
 - [Cardiovascular Diseases](https://www.google.com/search?q=cardiovascular+diseases&rlz=1C5CHFA_enUS728US728&oq=cardiovascular+diseases&aqs=chrome..69i57j0l2j0i20i263j0l3j0i20i263j0l2.3698j0j7&sourceid=chrome&ie=UTF-8)
 - [Chronic Renal Diseases](https://www.google.com/search?q=chronic+renal+diseiases&rlz=1C5CHFA_enUS728US728&oq=chronic+renal+diseiases&aqs=chrome..69i57j0i13j0i10i22i30l2j0i5i10i13i30j0i5i13i30j0i8i10i13i30j0i8i13i30l3.3775j0j7&sourceid=chrome&ie=UTF-8)
 - [Covid Pandemic Mortality Risk Estimator](https://www.economist.com/graphic-detail/covid-pandemic-mortality-risk-estimator)
+- [How to Connect AWS Amplify with React Native Application](https://hackernoon.com/how-to-connect-aws-amplify-with-react-native-application-8t1p3twj)
+- [Customizing the Built-in Sign-in and Sign-up Webpages](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pools-app-ui-customization.html)
+- [Customizing AWS Amplify Signin Page in React](https://medium.com/@kavyababu/customizing-aws-amplify-signin-page-in-react-94d95983d0c)
 
 ## Contributors
 
-[Bruno Borges](githublink)
-[Ryan Curtin]()
-[Cris Franco]()
-[Julie Ann Iwinski]()
+[Bruno Borges](https://github.com/BrunoBBorges)
+[Ryan Curtin](https://github.com/rpc08002)
+[Cris Franco](https://github.com/Cris-Franco)
+[Julie Ann Iwinski](https://github.com/JulieAnnI)
 [Pete Izzo](https://github.com/peter-izzo)
 [Danny Smooke](https://github.com/dsmooke)
+
+Special thanks to [Chris Bonafacio](https://github.com/chrisbonifacio) and [Nathan Sartain](https://github.com/NatePad) for helping with AWS Amplify and authentication.
 
 ## License
 
