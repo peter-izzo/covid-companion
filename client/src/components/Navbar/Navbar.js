@@ -53,9 +53,9 @@ function NavBar() {
       {/* Update Profile/Covid Status Link */}
       <li className="f6  ph3 ">
         <Link
-          to="/questionnaire"
+          to="/update-profile"
           className={
-            (location.pathname === "/questionnaire"
+            (location.pathname === "/update-profile"
               ? "nav-link active"
               : "nav-link",
             "link dim white")
