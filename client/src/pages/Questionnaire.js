@@ -58,7 +58,6 @@ export default function Questionnaire() {
     );
   }, []);
 
-<<<<<<< HEAD
   return (
     <div className="Question pa3" style={{ backgroundColor: "green" }}>
       <h1 className="pa3 br3">Covid Questionnaire</h1>
@@ -71,27 +70,14 @@ export default function Questionnaire() {
         onSubmit={handleSubmit}
         style={{ backgroundColor: "white" }}
       >
-        {/* <label htmlFor="name">
-=======
-  // const getUserData = async (userId) => {
-  //   // get data by userId
-  //   axios.get(`covidcompanion.com/api/profile/${userId}`);
-  // };
-
-  return (
-    <div className="Question pa3">
-      <h1 className="pa3">Covid Questionnaire</h1>
-      <h2 className="pa3">Start answering to see some magic happen!</h2>
-      <form className="pa3" onSubmit={handleSubmit}>
         <label htmlFor="name">
->>>>>>> bd20e0e89c7486b2d28838fcb5fb93dd3c59ed37
           Name
           <input type="text" name="name" onChange={handleChange} />
         </label>
         <label htmlFor="location">
           Location
           <input type="text" name="location" onChange={handleChange} />
-        </label> */}
+        </label>
 
         {questions.map((q) => {
           return (
