@@ -4,7 +4,7 @@ const { Schema } = mongoose;
 // This will outline the structure of the user and their answers to questions (schema)
 
 const userSchema = new Schema({
-  userId: { type: String, required: true },
+  _id: { type: String, required: true },
   name: { type: String, required: true },
   location: { type: String, required: true },
   covidStatus: { type: String, required: true },
