@@ -4,7 +4,10 @@ import Friend from "../components/Friend";
 // @todo populate profile with added friends
 // const friends =[];
 
+
+
 function FriendCircle() {
+  const circle = user.circle.map((user,))
   return (
     <main
       className="ml5 center pa3 shadow-3 br3"

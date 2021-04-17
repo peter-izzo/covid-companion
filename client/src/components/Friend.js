@@ -12,7 +12,7 @@ const element = (
 
 function Friend({ user }) {
   // const location = useLocation();
-
+ 
   return (
     <div
       className="friendCard pv2 w-100 br3 shadow-3 "

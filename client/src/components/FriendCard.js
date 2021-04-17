@@ -1,9 +1,12 @@
-import React from "react";
+import React, {useState} from "react";
 import CardBtn from "./CardBtn";
 
 /* @todo add loop to fill in cards with names add onclick event for follow button*/
 
 function FriendCard({ user }) {
+
+  const [circle, addCircle] = useState();
+
   return (
     <div
       className="friendCard pv2 w-100 br3 shadow-3 "
@@ -35,9 +38,18 @@ function FriendCard({ user }) {
         </h1>
       </div>
       <div className="dtc v-mid">
-        <form className="w-100 tr  ">
-          <CardBtn />
-        </form>
+        <div className="w-100 tr  ">
+          <button key={user?.user.id}
+            class="f6 button-reset bg-white ba b--black-10 dim pointer pv1 black-60 shadow-5 br2 fw5"
+            style={{
+              backgroundColor: "#c5d0ff",
+              marginLeft: "20px",
+              color: "black",
+            }}
+            onClick={(e) => user.addCircle(user)}>
+            + Add to Circle
+          </button>
+        </div>
       </div>
     </div>
   );
