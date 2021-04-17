@@ -2,23 +2,23 @@
 import React from "react";
 import "../index.css"
 
-function CovidInfo() {
+function CovidInfo({user}) {
   return (
-    <div className="CovidChart">
+    <div className="CovidChart" key = {user?.userId}>
       <ul className="list pl0 ml0 center mw5 ba b--light-silver br3">
-        <li className="ph3 pv2 bb b--light-silver bg-red">Positive (+)</li>
+        <li className="ph3 pv2 bb b--light-silver bg-red">Covid Status{user?.covidStatus}</li>
         <li className="ph3 pv2 bb b--light-silver bg-blue">
-          Quarantined (Day #/10)
+          Quarantined (Day {user?.quarantineDay}/14)
         </li>
         <li className="ph3 pv2 bb b--light-silver bg-yellow">
-          Last Tested (mm/dd/yyyy)
+          Last Tested {user?.testDate}
         </li>
 
         <li className="ph3 pv2 bb b--light-silver bg-green">
-          Vaccinated (P/M/JJ)
+          Vaccinated {user?.vaccinated}
         </li>
         <li className="ph3 pv2 bb b--light-silver bg-orange">
-          Risk Level (0-10)
+          Risk Level {user?.riskLevel}
         </li>
       </ul>
       <ul className="list pl0">
