@@ -1,7 +1,6 @@
 import React from "react";
 
-// export default
-
+// Add Friend Button
 function CardBtn() {
   return (
     <button

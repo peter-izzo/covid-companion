@@ -33,7 +33,6 @@ function FriendCard({ user }) {
         >
           {user?.name}
         </h1>
-        {/* <h2 className="f6 fw4 mt0 mb0 black-60">{}</h2> */}
       </div>
       <div className="dtc v-mid">
         <form className="w-100 tr  ">

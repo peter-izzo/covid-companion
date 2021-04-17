@@ -6,7 +6,7 @@ function HomeAbout() {
       <header className="sans-serif">
         <div
           className="cover bg-left bg-center-l"
-          style={{ backgroundImage: "http://mrmrs.github.io/photos/u/011.jpg" }}
+          style={{ backgroundImage: "../imgs/covid-img" }}
         />
         <div className="bg-black-80 pb5 pb6-m pb7-l">
           <nav className="dt w-100 mw8 center">
