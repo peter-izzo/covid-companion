@@ -1,8 +1,8 @@
 // creates status bars depending on user input
 import React from "react";
 import "../index.css";
+// Importing Font Awesome Icons
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
 import {
   faHeadSideVirus,
   faHeadSideMask,
@@ -40,16 +40,7 @@ const element10 = <FontAwesomeIcon icon={faChartLine} className="f4 dib ml3" />;
 const element11 = <FontAwesomeIcon icon={faThumbsUp} className="f4 dib ml3" />;
 const element12 = <FontAwesomeIcon icon={faBiohazard} className="f4 dib ml3" />;
 
-// import { questions } from "../components/questions.js";
-
 function CovidInfo({ user }) {
-  // function colorCoordinate() {
-  //   const covidStatus = document.getElementById("covidStatus");
-  //   if (user.covidStatus === "Positive (+)") {
-  //     covidStatus.addClass("positive");
-  //   console.log("positive" + ".positive");
-  // }
-
   return (
     <div className="CovidChart">
       <ul className="list pl0 ml0 center mw5 ba b--light-silver br3 fw5 tc">
@@ -95,14 +86,6 @@ function CovidInfo({ user }) {
           {element12} Risk Level (6): Highest
         </li>
       </ul>
-      {/* <ul className="list pl0">
-        <li className="pa3 pa4-ns bb b--black-10">
-          <b className="db f5 mb1">Health Conditions</b>
-          <span className="f6 db center lh-copy measure">
-            Asthma, High-Blood-Pressure.
-          </span>
-        </li>
-      </ul> */}
     </div>
   );
 }

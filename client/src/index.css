@@ -68,6 +68,13 @@ code {
   color: white;
 }
 
+@media (min-width: 767px) {
+ #infoIcon, .ml5{
+   padding-left: 10px;
+   margin-left: 5rem !important;
+ }
+}
+
 /*For Desktop view*/
 @media (min-width: 1025px) {
   .test {
@@ -85,7 +92,20 @@ code {
   #profile {
     background-color: rgb(147, 161, 187);
   }
+  #infoIcon {
+    padding-left: 200px;
+  }
+  #friendImg {
+    padding-right: 30px !important;
+  }
+  #friendName {
+    padding-left: 0px !important;
+  }
+  .friendCard {
+    padding: 20px;
+  }
 }
+
 
 /* .test2 {
     display: flex;

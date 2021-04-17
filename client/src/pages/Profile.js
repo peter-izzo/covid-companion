@@ -1,9 +1,7 @@
-// import AvatarBio, CovidInfo, FriendList (=FriendCard x5)
-
 import React from "react";
 import AvatarBio from "../components/AvatarBio";
 import FriendCircle from "../components/FriendCircle";
-import CovidInfo from "../components/CovidInfo";
+// import CovidInfo from "../components/CovidInfo";
 import Navbar from "../components/Navbar/Navbar";
 import Footer from "../components/Footer/Footer";
 
@@ -15,7 +13,7 @@ function Profile() {
           <div className="tc">
             <div className="test2">
               <AvatarBio />
-              <CovidInfo />
+              {/* <CovidInfo /> */}
             </div>
             <FriendCircle />
           </div>

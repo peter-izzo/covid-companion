@@ -1,4 +1,6 @@
 import React from "react";
+// import CovidInfo from "./CovidInfo"; // @todo import to populate?
+
 import "../index.css";
 
 function AvatarBio({ user }) {
@@ -16,6 +18,7 @@ function AvatarBio({ user }) {
       <h2 className="f5 fw4 gray mt0" id="location">
         Location {user?.location}
       </h2>
+      {/* <CovidInfo /> */} {/* @todo importing covidInfo? */}
     </div>
   );
 }
