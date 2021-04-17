@@ -5,8 +5,10 @@ import axios from "axios";
 
 import Question from "../components/Question";
 import "../index.css";
+import { useHistory } from "react-router-dom";
 
 export default function Questionnaire() {
+  const history = useHistory()
   // Create initial state object of questions set to empty strings
   const initialValue = () => {
     const formQuestions = {};
@@ -38,24 +40,32 @@ export default function Questionnaire() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const user = await Auth.currentAuthenticatedUser();
-    const userId = user.attributes.sub;
-    answers.userId = userId;
+    const _id = user.attributes.sub;
+    answers._id = _id;
 
-    axios.post("http://localhost:3001/create", answers);
+    axios.post("http://localhost:3001/create", answers).then((res) => {
+      console.log(res)
+      history.push("/profile")
+    });
     console.log(answers);
   };
-  useEffect(() => {
-    // const user = Auth.currentAuthenticatedUser();
-    const userId = null;
-    axios.get(`http://localhost:3001/profile/${userId}`).then(
-      (answers) => {
-        console.log(answers);
-        setanswers(answers);
+
+  async function getUserData() {
+    const user = await Auth.currentAuthenticatedUser();
+    axios.get(`http://localhost:3001/profile/${user.attributes.sub}`).then(
+      (res) => {
+        console.log(res.data);
+        if (res?.data?.name) {
+          history.push("/profile")  
+        }
       },
       (error) => {
         console.log(error);
       }
     );
+  }
+  useEffect(() => {
+    getUserData();
   }, []);
 
   return (
@@ -94,9 +104,8 @@ export default function Questionnaire() {
           );
         })}
         {answers.sellYourSoul && (
-          <a
+          <button
             className="f6 link dim br1 ph3 pv2 mb2 dib white bg-dark-green fw6 br2 shadow-3"
-            href="/profile"
             type="submit"
             style={{
               marginLeft: "10px",
@@ -105,7 +114,7 @@ export default function Questionnaire() {
             }}
           >
             Submit
-          </a>
+          </button>
         )}
       </form>
     </div>

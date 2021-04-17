@@ -53,11 +53,11 @@ function CovidInfo({ user }) {
   return (
     <div className="CovidChart">
       <ul className="list pl0 ml0 center mw5 ba b--light-silver br3 fw5 tc">
-        <li id="covidStatus" className="ph3 pv2 bb b--light-silver positive">
-          {element} Positive (+) {user?.covidStatus}
+        <li hidden={user?.covidStatus === "Negative (-)"} id="covidStatus" className="ph3 pv2 bb b--light-silver positive">
+          {element} {user?.covidStatus}
         </li>
-        <li hidden className="ph3 pv2 bb b--light-silver bg-green negative">
-          {element4} Negative (-)
+        <li hidden={user?.covidStatus === "Positive (+)"} className="ph3 pv2 bb b--light-silver bg-green negative">
+          {element4} {user?.covidStatus}
         </li>
         {/* @todo hidden condition to display based on answers */}
 
