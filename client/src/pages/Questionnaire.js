@@ -67,7 +67,7 @@ export default function Questionnaire() {
         style={{ backgroundColor: "white" }}
       >
         {/* <label htmlFor="name">
-          Name 
+          Name
           <input type="text" name="name" onChange={handleChange} />
         </label>
         <label htmlFor="location">

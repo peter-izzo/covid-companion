@@ -20,6 +20,7 @@ function NavBar() {
     <ul
       className="fixed-bottom-nav flex justify-center list pv2 mv0 fw6"
       style={{ backgroundColor: "blue" }}
+      id="navbar"
     >
       {/* Add to Circle Link/Search for friends */}
       <li className=" f6  ph3 ">

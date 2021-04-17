@@ -73,14 +73,23 @@ code {
   .test {
     margin-left: 200px;
     margin-right: 200px;
-    max-width: 110rem;
+    max-width: 150rem;
     max-height: 100rem;
   }
+  #navbar {
+    height: 75px !important;
+  }
+  .bio {
+    padding-top: 90px;
+  }
+  #profile {
+    background-color: rgb(147, 161, 187);
+  }
+}
 
-  /* .test2 {
+/* .test2 {
     display: flex;
     align-items: center;
     /* justify-content: center; */
-  /* justify-content: space-evenly;
+/* justify-content: space-evenly;
   } */
-}
