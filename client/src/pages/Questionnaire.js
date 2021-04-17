@@ -44,16 +44,21 @@ export default function Questionnaire() {
     axios.post("http://localhost:3001/create", answers);
     console.log(answers);
   };
-
-  const getUserData = async (userId) => {
-    // get data by userId
-    axios.get(`covidcompanion.com/api/profile/${userId}`);
-  };
-
   useEffect(() => {
-    console.log(answers);
-  }, [answers]);
+    // const user = Auth.currentAuthenticatedUser();
+    const userId = null;
+    axios.get(`http://localhost:3001/profile/${userId}`).then(
+      (answers) => {
+        console.log(answers);
+        setanswers(answers);
+      },
+      (error) => {
+        console.log(error);
+      }
+    );
+  }, []);
 
+<<<<<<< HEAD
   return (
     <div className="Question pa3" style={{ backgroundColor: "green" }}>
       <h1 className="pa3 br3">Covid Questionnaire</h1>
@@ -67,6 +72,19 @@ export default function Questionnaire() {
         style={{ backgroundColor: "white" }}
       >
         {/* <label htmlFor="name">
+=======
+  // const getUserData = async (userId) => {
+  //   // get data by userId
+  //   axios.get(`covidcompanion.com/api/profile/${userId}`);
+  // };
+
+  return (
+    <div className="Question pa3">
+      <h1 className="pa3">Covid Questionnaire</h1>
+      <h2 className="pa3">Start answering to see some magic happen!</h2>
+      <form className="pa3" onSubmit={handleSubmit}>
+        <label htmlFor="name">
+>>>>>>> bd20e0e89c7486b2d28838fcb5fb93dd3c59ed37
           Name
           <input type="text" name="name" onChange={handleChange} />
         </label>
