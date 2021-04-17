@@ -34,13 +34,6 @@ code {
   background-color: rgb(3, 248, 207);
 }
 
-/* .pfizer {
-  height: 10px;
-  width: 10px;
-  border-radius: 100px;
-  background-color: white;
-} */
-
 .riskLevel-6 {
   background-color: rgb(124, 2, 2);
   color: white;
@@ -68,11 +61,13 @@ code {
   color: white;
 }
 
+/*Tablet View*/
 @media (min-width: 767px) {
- #infoIcon, .ml5{
-   padding-left: 10px;
-   margin-left: 5rem !important;
- }
+  #infoIcon,
+  .ml5 {
+    padding-left: 10px;
+    margin-left: 5rem !important;
+  }
 }
 
 /*For Desktop view*/
@@ -105,7 +100,6 @@ code {
     padding: 20px;
   }
 }
-
 
 /* .test2 {
     display: flex;

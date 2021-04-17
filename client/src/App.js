@@ -1,10 +1,15 @@
 import React from "react";
-import { Route, useHistory } from "react-router-dom";
-import HomeAbout from "./pages/Home-About";
-// // import Navbar from "./components/Navbar/Navbar";
-import SignUp from "./pages/SignUp";
+// import { Route, useHistory } from "react-router-dom";
+import { Route } from "react-router-dom";
 
-// import SearchFriends from "./pages/SearchFriends";
+import HomeAbout from "./pages/Home-About";
+// import SignUp from "./pages/SignUp"; @todo delete b/c unsused
+// import SignIn from "./pages/SignIn"; @todo delete b/c unsused
+// import Navbar from "./components/Navbar/Navbar"; @todo delete b/c unsused
+import Questionnaire from "./pages/Questionnaire";
+import Profile from "./pages/Profile";
+import SearchFriends from "./pages/SearchFriends";
+import UpdateProfile from "./pages/UpdateProfile";
 
 import "./index.css";
 import Amplify, { Auth } from "aws-amplify";
@@ -15,29 +20,8 @@ import {
   AmplifySignUp,
 } from "@aws-amplify/ui-react";
 import { AuthState, onAuthUIStateChange } from "@aws-amplify/ui-components";
-import SignIn from "./pages/SignIn";
-import Navbar from "./components/Navbar/Navbar";
-import Questionnaire from "./pages/Questionnaire";
-import Profile from "./pages/Profile";
-import SearchFriends from "./pages/SearchFriends";
-Amplify.configure(awsconfig);
-// import SearchFriends from "./pages/SearchFriends";
 
-// Original Code 4/10/2021 @audit-issue app.js
-// const App = () => {
-//   const handleClick = async () => {
-//     console.log("click");
-//     const results = await Auth.currentAuthenticatedUser();
-//     console.log(results.attributes.sub);
-//   };
-//   return (
-//     <div>
-//       <Navbar />
-//       <AmplifySignOut />
-//       My App <button onClick={handleClick}>Submit</button>
-//     </div>
-//   );
-// };
+Amplify.configure(awsconfig);
 
 function App() {
   const history = useHistory();
@@ -49,7 +33,7 @@ function App() {
       setAuthState(nextAuthState);
       setUser({ ...authData, ...creds });
       if (nextAuthState === AuthState.SignedIn) {
-        console.log(await Auth.currentAuthenticatedUser())
+        console.log(await Auth.currentAuthenticatedUser());
         history.push("/questionnaire");
       }
     });
@@ -58,10 +42,10 @@ function App() {
     <>
       {authState === AuthState.SignedIn ? (
         <div className="App">
-          <Route exact path="/sign-in" component={SignIn} />
-          <Route exact path="/sign-up" component={SignUp} />
+          {/* <Route exact path="/sign-in" component={SignIn} /> @todo delete b/c unsused
+        <Route exact path="/sign-up" component={SignUp} /> */}
           <Route exact path="/questionnaire" component={Questionnaire} />
-          {/* <Route exact path="/editprofile" component={Questionnaire} /> */}
+          <Route exact path="/update-profile" component={UpdateProfile} />
           <Route exact path="/profile" component={Profile} />
           <Route exact path="/search" component={SearchFriends} />
         </div>

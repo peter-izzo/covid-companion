@@ -1,9 +1,7 @@
-// import AvatarBio, CovidInfo, FriendList (=FriendCard x5)
-
 import React, { useEffect, useState } from "react";
 import AvatarBio from "../components/AvatarBio";
 import FriendCircle from "../components/FriendCircle";
-// import CovidInfo from "../components/CovidInfo";
+import CovidInfo from "../components/CovidInfo";
 import Navbar from "../components/Navbar/Navbar";
 import Footer from "../components/Footer/Footer";
 import { Auth } from "aws-amplify";

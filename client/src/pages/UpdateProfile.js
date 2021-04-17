@@ -2,7 +2,7 @@ import React from "react";
 import UpdateQuestionnaire from "../components/UpdateQuestionnaire";
 
 export default function UpdateProfile() {
-  // importing to update profile by doing questionnaire
+  // @todo importing to update profile by doing questionnaire
   return (
     <div>
       <div className="Question pa3" style={{ backgroundColor: "#f04500" }}>
