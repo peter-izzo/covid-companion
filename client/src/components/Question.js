@@ -30,32 +30,24 @@ const Question = ({
       return (
         <>
           {visible && (
-            // <div className="ml3" style={{ marginRight: "4px" }}>
             <>
               {prompt}
               {answers.map((a) => (
                 <>
-                  <ol>
+                  <ol className="fw4">
                     <input
-                      // className="fw5"
-                      // style={{ marginRight: "10px", marginLeft: "5px" }}
                       id={a}
                       type="radio"
                       name={name}
                       value={a}
                       onChange={onChange}
                     />
-                    <label
-                      style={{ marginLeft: "8px" }}
-                      // cellSpacing="3"
-                      htmlFor={a}
-                    >
+                    <label style={{ marginLeft: "8px" }} htmlFor={a}>
                       {a}
                     </label>
                   </ol>
                 </>
               ))}
-              {/* </div> */}
             </>
           )}
         </>
@@ -65,21 +57,14 @@ const Question = ({
         <>
           {visible && (
             <>
-              {/* <div className="ml3" style={{ marginRight: "4px" }}> */}
               {prompt}
               <ol>
-                <select
-                  // className="ml2"
-                  // style={{ marginLeft: "10px" }}
-                  name={name}
-                  onChange={onChange}
-                >
+                <select name={name} onChange={onChange}>
                   {answers.map((a) => (
                     <option value={a}>{a}</option>
                   ))}
                 </select>
               </ol>
-              {/* </div> */}
             </>
           )}
         </>
@@ -89,7 +74,6 @@ const Question = ({
         <>
           {visible && (
             <>
-              {/* <div className="ml3" style={{ marginRight: "4px" }}> */}
               {prompt}
               <ol>
                 <input
@@ -98,7 +82,6 @@ const Question = ({
                   name={name}
                   onChange={onChange}
                 />
-                {/* </div> */}
               </ol>
             </>
           )}
@@ -109,16 +92,13 @@ const Question = ({
         <>
           {visible && (
             <>
-              {/* <div className="ml3" style={{ marginRight: "4px" }}> */}
               {prompt}
               <input
-                // className="pa3 w-100"
                 type="checkbox"
                 name={name}
                 checked={data[name]}
                 onChange={onChange}
               />
-              {/* </div> */}
             </>
           )}
         </>

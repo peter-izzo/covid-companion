@@ -5,7 +5,7 @@ import "./footer.css";
 function Footer() {
   const location = useLocation();
   return (
-    <footer className="pb5 ml3 mr3">
+    <footer className="pb5 ml3 mr3" style={{ paddingBottom: "115px" }}>
       <small className="f6 db tc">
         © 2021 <b className="ttu">COVID Companion</b>., All Rights Reserved
       </small>
