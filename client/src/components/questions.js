@@ -1,10 +1,25 @@
 export const questions = [
   {
+    name: "location",
+    type: "select",
+    prompt: "What state do you live in?",
+    answers: ["CT", "FL"],
+    // when login in
+  },
+
+  // {
+  //   name: "cityLocation",
+  //   type: "input",
+  //   prompt: "Enter your city",
+  //   answers: "",
+  //   when: (questions) => questions.location === "CT",
+  // },
+  {
     name: "covidStatus",
     type: "boolean",
     prompt: "What is your Covid status?",
     answers: ["Positive (+)", "Negative (-)"],
-    // when: login => skip questions, signup => go to first question in form
+    when: (questions) => questions.location,
   },
 
   {
@@ -50,7 +65,7 @@ export const questions = [
     name: "vaccineCo",
     type: "select",
     prompt: "Which vaccine did you receive?",
-    answers: ["Pfizer", "Moderna", "Johnson & Johnson"],
+    answers: ["Other", "Pfizer", "Moderna", "Johnson & Johnson"],
     when: (questions) => questions.vaccinated === "Yes",
   },
   {
