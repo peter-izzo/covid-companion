@@ -49,7 +49,8 @@ function App() {
       setAuthState(nextAuthState);
       setUser({ ...authData, ...creds });
       if (nextAuthState === AuthState.SignedIn) {
-        history.push("/profile");
+        console.log(await Auth.currentAuthenticatedUser())
+        history.push("/questionnaire");
       }
     });
   }, []);

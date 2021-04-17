@@ -57,11 +57,8 @@ app.post("/create", (req, res) => {
     });
 });
 
-app.get("profile/:userId", (req, res) => {
-  const id = req.params.id;
-  User.findById(id, (err, user) => {
-    res.json(user);
-  });
+app.get("/profile/:userId", (req, res) => {
+  User.findById(req.params.userId).then(users => res.json(users));
 });
 
 // app.post("/:id", (req, res) => {
