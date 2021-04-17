@@ -45,8 +45,8 @@ app.get("/", (req, res) => {
 });
 
 app.post("/create", (req, res) => {
-  console.log(req.body); //req.body.answers?
-  const user = new User(req.body); //req.body.answers?
+  console.log(req.body);
+  const user = new User(req.body);
   user
     .save()
     .then((user) => {
@@ -57,30 +57,30 @@ app.post("/create", (req, res) => {
     });
 });
 
-app.get("/:id", (req, res) => {
+app.get("profile/:userId", (req, res) => {
   const id = req.params.id;
   User.findById(id, (err, user) => {
     res.json(user);
   });
 });
 
-app.post("/:id", (req, res) => {
-  const id = req.params.id;
-  User.findById(id, (err, user) => {
-    if (!user) {
-      res.status(404).send("User not found");
-    } else {
-      user.text = req.body.text;
+// app.post("/:id", (req, res) => {
+//   const id = req.params.id;
+//   User.findById(id, (err, user) => {
+//     if (!user) {
+//       res.status(404).send("User not found");
+//     } else {
+//       user.text = req.body.text;
 
-      user
-        .save()
-        .then((user) => {
-          res.json(user);
-        })
-        .catch((err) => res.status(500).send(err.message));
-    }
-  });
-});
+//       user
+//         .save()
+//         .then((user) => {
+//           res.json(user);
+//         })
+//         .catch((err) => res.status(500).send(err.message));
+//     }
+//   });
+// });
 
 // Listener
 app.listen(port, () => console.log(`listening on localhost: ${port}`));
