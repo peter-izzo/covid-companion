@@ -1,20 +1,5 @@
 export const questions = [
   {
-    name: "location",
-    type: "select",
-    prompt: "What state do you live in?",
-    answers: ["CT", "FL"],
-    // when login in
-  },
-
-  // {
-  //   name: "cityLocation",
-  //   type: "input",
-  //   prompt: "Enter your city",
-  //   answers: "",
-  //   when: (questions) => questions.location === "CT",
-  // },
-  {
     name: "covidStatus",
     type: "boolean",
     prompt: "What is your Covid status?",
