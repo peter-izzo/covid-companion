@@ -59,7 +59,7 @@ function CovidInfo({ user }) {
           {element4} {user?.covidStatus}
         </li>
         <li
-          hidden={user?.inQuarantine === "No"}
+          hidden={user?.inQuarantine === "No" || !user?.quarantineDay}
           className="ph3 pv2 bb b--light-silver inQuarantine"
         >
           {element2} Quarantined Day ({user?.quarantineDay}/14)
