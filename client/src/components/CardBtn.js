@@ -1,16 +1,16 @@
-import React from "react";
+import React, { useReducer } from "react";
 
 // Add Friend Button
-function CardBtn() {
+function CardBtn({user}) {
   return (
-    <button
+    <button key={user.id}
       class="f6 button-reset bg-white ba b--black-10 dim pointer pv1 black-60 shadow-5 br2 fw5"
       style={{
         backgroundColor: "#c5d0ff",
         marginLeft: "20px",
         color: "black",
       }}
-      type="submit"
+      onClick={() => user.addCircle(user)}
     >
       + Add to Circle
     </button>

@@ -89,6 +89,7 @@ code {
   #navbar {
     height: 75px !important;
   }
+ 
 }
 
 /*For Desktop view*/
@@ -130,11 +131,9 @@ code {
     margin-left: 150px;
     align-items: center;
   }
+  .search {
+    margin-top: 70px;
+  }
+  
 }
 
-/* .test2 {
-    display: flex;
-    align-items: center;
-    /* justify-content: center; */
-/* justify-content: space-evenly;
-  } */
