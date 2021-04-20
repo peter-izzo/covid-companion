@@ -1,8 +1,9 @@
 import React from "react";
-import UpdateQuestionnaire from "../components/UpdateQuestionnaire";
+import Questionnaire from "./Questionnaire";
 
 export default function UpdateProfile() {
   // @todo importing to update profile by doing questionnaire
+
   return (
     <div>
       <div className="Question pa3" style={{ backgroundColor: "#f04500" }}>
@@ -12,7 +13,7 @@ export default function UpdateProfile() {
           your Covid status:
         </h2>
       </div>
-      <UpdateQuestionnaire />
+      <Questionnaire />
     </div>
   );
 }
