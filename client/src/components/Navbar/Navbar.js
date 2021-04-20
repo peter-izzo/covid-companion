@@ -1,4 +1,5 @@
 import React from "react";
+import { Auth } from 'aws-amplify';
 import { Link, useLocation } from "react-router-dom";
 import "./navbar.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -12,7 +13,6 @@ import {} from "@fortawesome/free-solid-svg-icons";
 import {} from "@fortawesome/free-solid-svg-icons";
 import { Auth } from "aws-amplify";
 // import { faMap } from "@fortawesome/free-solid-svg-icons";
-
 //Font awesome icons
 const element = <FontAwesomeIcon icon={faHouseUser} className="f2 pv2" />;
 const elementb = <FontAwesomeIcon icon={faSearchPlus} className="f2 pv2" />;
@@ -46,7 +46,6 @@ function NavBar() {
           <label className="f6 tc">Search</label>
         </Link>
       </li>
-
       {/* Home link */}
       <li className=" f6  ph3">
         <Link
@@ -60,7 +59,6 @@ function NavBar() {
           <label className="f6 tc">Profile</label>
         </Link>
       </li>
-
       {/* Update Profile/Covid Status Link */}
       <li className="f6  ph3 ">
         <Link
@@ -92,9 +90,7 @@ function NavBar() {
     </ul>
   );
 }
-
 export default NavBar;
-
 // style={{ marginRight: "0px", marginTop: "0px" }}
 /* within li for circle around icon and label style={{
           backgroundColor: "green",

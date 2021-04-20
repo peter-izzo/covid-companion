@@ -67,6 +67,16 @@ app.put("/profile/:userId", (req, res) => {
   );
 });
 
+app.post("/search", (req, res) => {
+  User.find({name:{$regex:req.body.name, $options:"i"}}).then((users) => {
+
+    res.send(users);  
+  });
+});
+
+app.put("/profile/friends", (req, res) => {})
+
+
 // app.post("/:id", (req, res) => {
 //   const id = req.params.id;
 //   User.findById(id, (err, user) => {
