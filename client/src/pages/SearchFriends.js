@@ -2,6 +2,7 @@ import React from "react";
 import SearchBar from "../components/SearchBar";
 import SearchResults from "../components/SearchResults";
 import NavBar from "../components/Navbar/Navbar";
+import { AmplifySignOut } from "@aws-amplify/ui-react";
 
 const users = [
   {
@@ -38,6 +39,7 @@ function SearchFriends() {
         <SearchResults users={searchResults} />
       </div>
       <NavBar />
+      <AmplifySignOut />
     </div>
   );
 }

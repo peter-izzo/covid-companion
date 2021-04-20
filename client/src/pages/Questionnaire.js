@@ -9,7 +9,6 @@ import { useHistory } from "react-router-dom";
 
 export default function Questionnaire() {
   const history = useHistory();
-
   // Create initial state object of questions set to empty strings
   const initialValue = () => {
     const formQuestions = {};
@@ -66,6 +65,26 @@ export default function Questionnaire() {
       }
     );
   }
+  async function updateUserData() {
+    const user = await Auth.currentAuthenticatedUser();
+    axios.put(`http://localhost:3001/profile/${user.attributes.sub}`).then(
+      (res) => {
+        console.log(res.data);
+        if (res?.data?.name) {
+          history.push("/profile");
+        }
+      },
+      (error) => {
+        console.log(error);
+      }
+    );
+  }
+
+  //Function to call updateUserData????
+  // useEffect(() => {
+  //   updateUserData();
+  // }, []); ?????
+
   useEffect(() => {
     getUserData();
   }, []);
