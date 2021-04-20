@@ -6,8 +6,8 @@ import Friend from "../components/Friend";
 
 
 
-function FriendCircle() {
-  const circle = user.circle.map((user,))
+function FriendCircle({friends}) {
+
   return (
     <main
       className="ml5 center pa3 shadow-3 br3"
@@ -21,7 +21,10 @@ function FriendCircle() {
         className="dt center w-100 bb b--black-05 pb2 mt2"
         href="#0"
       ></article>{" "}
-      <Friend />
+      {/* {friends.map((user) => {
+        return <Friend user={user} />;
+      })} */}
+      
     </main>
   );
 }
