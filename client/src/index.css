@@ -63,11 +63,16 @@ code {
 
 @media (min-width: 300px) {
   #siteTitle {
-    padding: 40px;
+    padding: 30px;
     margin-bottom: 0px;
   }
-}
-#logOutbtn {
+  #infoIcon {
+    padding-left: 55px;
+    /* margin-left: 5rem !important; */
+  }
+  #friendName {
+    font-size: 18px;
+  }
 }
 
 /*Tablet View*/

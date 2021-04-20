@@ -1,5 +1,5 @@
 import React from "react";
-import { Auth } from 'aws-amplify';
+import { Auth } from "aws-amplify";
 import { Link, useLocation } from "react-router-dom";
 import "./navbar.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -9,10 +9,6 @@ import {
   faViruses,
   faSignOutAlt,
 } from "@fortawesome/free-solid-svg-icons";
-import {} from "@fortawesome/free-solid-svg-icons";
-import {} from "@fortawesome/free-solid-svg-icons";
-import { Auth } from "aws-amplify";
-// import { faMap } from "@fortawesome/free-solid-svg-icons";
 //Font awesome icons
 const element = <FontAwesomeIcon icon={faHouseUser} className="f2 pv2" />;
 const elementb = <FontAwesomeIcon icon={faSearchPlus} className="f2 pv2" />;

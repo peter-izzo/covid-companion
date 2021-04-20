@@ -12,8 +12,6 @@ const element = (
   />
 );
 
-/* @todo add loop to fill in cards with names add onclick event for follow button*/
-
 function Friend({ user }) {
   // const location = useLocation();
  
