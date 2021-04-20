@@ -6,7 +6,8 @@ import "../index.css";
 const element = (
   <FontAwesomeIcon
     icon={faInfoCircle}
-    className="f4 ml5 pl4 o-60"
+    className="f4 ml5 pl6 o-60"
+    // style={{ paddingRight: "30px" }}
     id="infoIcon"
   />
 );

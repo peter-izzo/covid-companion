@@ -42,7 +42,7 @@ const element12 = <FontAwesomeIcon icon={faBiohazard} className="f4 dib ml3" />;
 
 function CovidInfo({ user }) {
   return (
-    <div className="CovidChart">
+    <div className="CovidChart" style={{ paddingBottom: "5px" }}>
       <ul className="list pl0 ml0 center mw5 ba b--light-silver br3 fw5 tc">
         <li
           hidden={user?.covidStatus === "Negative (-)"}
