@@ -8,10 +8,11 @@ import "../index.css";
 import { useHistory } from "react-router-dom";
 
 export default function Questionnaire() {
-  const history = useHistory()
+  const history = useHistory();
   // Create initial state object of questions set to empty strings
   const initialValue = () => {
     const formQuestions = {};
+
     // const formQuestions = { name: "", location: "" };
 
     for (let q of questions) {
@@ -44,8 +45,8 @@ export default function Questionnaire() {
     answers._id = _id;
 
     axios.post("http://localhost:3001/create", answers).then((res) => {
-      console.log(res)
-      history.push("/profile")
+      console.log(res);
+      history.push("/profile");
     });
     console.log(answers);
   };
@@ -56,7 +57,7 @@ export default function Questionnaire() {
       (res) => {
         console.log(res.data);
         if (res?.data?.name) {
-          history.push("/profile")  
+          history.push("/profile");
         }
       },
       (error) => {
@@ -64,6 +65,26 @@ export default function Questionnaire() {
       }
     );
   }
+  async function updateUserData() {
+    const user = await Auth.currentAuthenticatedUser();
+    axios.put(`http://localhost:3001/profile/${user.attributes.sub}`).then(
+      (res) => {
+        console.log(res.data);
+        if (res?.data?.name) {
+          history.push("/profile");
+        }
+      },
+      (error) => {
+        console.log(error);
+      }
+    );
+  }
+
+  //Function to call updateUserData????
+  // useEffect(() => {
+  //   updateUserData();
+  // }, []); ?????
+
   useEffect(() => {
     getUserData();
   }, []);
