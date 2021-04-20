@@ -58,6 +58,7 @@ export const questions = [
     type: "select",
     prompt: "Do you have any serious health conditions?",
     answers: [
+      "Choose one...",
       "No preexising conditions",
       "Age 60+",
       "Chronic respiratory diseases",
