@@ -10,12 +10,10 @@ function AvatarBio({ user }) {
         alt="avatar"
       />
       <h1>{user?.name}</h1>
-      {/* <h2 className="f5 fw4 gray mt0" id="age">
-        Age
-      </h2> */}
       <h2 className="f5 fw4 gray mt0" id="location">
         {user?.location}
       </h2>
+      {/* <CovidInfo /> */} {/* @todo importing covidInfo? */}
     </div>
   );
 }

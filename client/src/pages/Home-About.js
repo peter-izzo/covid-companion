@@ -37,7 +37,7 @@ function HomeAbout() {
               visited are automatically updated. By keeping everyone in the
               loop, people can get tested faster and reduce the spread.
             </h2>
-            <a
+            {/* <a
               className="f6 no-underline grow dib v-mid bg-blue white ba b--blue ph3 pv2 mb3"
               href="/sign-in"
             >
@@ -49,7 +49,7 @@ function HomeAbout() {
               href="/sign-up"
             >
               Sign Up
-            </a>
+            </a> */}
           </div>
         </div>
       </header>
