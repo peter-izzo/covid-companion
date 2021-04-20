@@ -1,12 +1,7 @@
-import React, {useEffect, useState} from "react";
+import React from "react";
 import FriendCard from "../components/FriendCard";
-import axios from "axios";
-import { Auth } from "aws-amplify";
-
 
 function SearchResults({ users }) {
-
-  
 
   return (
     <div

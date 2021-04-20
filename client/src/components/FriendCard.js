@@ -1,13 +1,8 @@
-import React, {useState, useEffect} from "react";
-// import CardBtn from "./CardBtn";
-import axios from "axios";
-import { Auth } from "aws-amplify";
+import React from "react";
+
 /* @todo add loop to fill in cards with names add onclick event for follow button*/
 
 function FriendCard({ user }) {
-  
-  
-
 
   return (
     <div
