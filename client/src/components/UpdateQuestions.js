@@ -6,6 +6,8 @@ import axios from "axios";
 import Question from "../components/Question";
 import "../index.css";
 import { useHistory } from "react-router-dom";
+import Navbar from "./Navbar/Navbar";
+import "./Navbar/navbar.css";
 
 export default function UpdateQuestions() {
   const history = useHistory();
@@ -86,6 +88,7 @@ export default function UpdateQuestions() {
           </button>
         )}
       </form>
+      <Navbar />
     </div>
   );
 }
