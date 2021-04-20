@@ -4,7 +4,10 @@ import Friend from "../components/Friend";
 // @todo populate profile with added friends
 // const friends =[];
 
-function FriendCircle() {
+
+
+function FriendCircle({friends}) {
+
   return (
     <main
       className="ml5 center pa3 shadow-3 br3"
@@ -24,6 +27,7 @@ function FriendCircle() {
         href="#0"
       ></article>{" "}
       <Friend />
+      
     </main>
   );
 }
