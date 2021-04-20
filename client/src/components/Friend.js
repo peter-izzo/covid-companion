@@ -15,7 +15,7 @@ const element = (
 
 function Friend({ user }) {
   // const location = useLocation();
-
+ 
   return (
     <div
       className="friendCard pv2 w-100 br3 shadow-3 "
@@ -33,7 +33,7 @@ function Friend({ user }) {
           style={{ padding: "15px", paddingLeft: "18px" }}
         />
       </div>
-      <div className="dtc v-mid pl3 tj" key={user?.userId}>
+      <div className="dtc v-mid pl3 tj" key={user?._id}>
         <h1
           className="f6 f5-ns fw6 lh-title black mv0 w-100 tj"
           id="friendName"

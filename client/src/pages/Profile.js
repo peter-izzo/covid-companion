@@ -6,7 +6,6 @@ import Navbar from "../components/Navbar/Navbar";
 import Footer from "../components/Footer/Footer";
 import { Auth } from "aws-amplify";
 import axios from "axios";
-import { AmplifySignOut } from "@aws-amplify/ui-react";
 
 function Profile() {
   const [userData, setUserData] = useState();
@@ -39,7 +38,6 @@ function Profile() {
           </div>
         </article>
         <Navbar />
-        <AmplifySignOut />
         <Footer />
       </div>
     </div>

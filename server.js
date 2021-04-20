@@ -62,8 +62,20 @@ app.get("/profile/:userId", (req, res) => {
 });
 
 app.put("/profile/:userId", (req, res) => {
-  User.findByIdAndUpdate(req.params.userId).then((users) => res.json(users));
+  User.updateOne({ _id: req.params.userId }, req.body).then((users) =>
+    res.json(users)
+  );
 });
+
+app.post("/search", (req, res) => {
+  User.find({name:{$regex:req.body.name, $options:"i"}}).then((users) => {
+
+    res.send(users);  
+  });
+});
+
+app.put("/profile/friends", (req, res) => {})
+
 
 // app.post("/:id", (req, res) => {
 //   const id = req.params.id;

@@ -1,7 +1,7 @@
 .Horizontal-List {
     display: flex;
     align-items: stretch; 
-    justify-content: space-between;
+    justify-content: space-around;
     width: 100%;
     margin: 0;
     padding: 0;

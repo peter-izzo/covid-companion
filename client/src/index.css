@@ -61,6 +61,8 @@ code {
   color: white;
 }
 
+
+
 /*Tablet View*/
 @media (min-width: 767px) {
   #infoIcon,
@@ -68,6 +70,7 @@ code {
     padding-left: 10px;
     margin-left: 5rem !important;
   }
+ 
 }
 
 /*For Desktop view*/
@@ -99,11 +102,9 @@ code {
   .friendCard {
     padding: 20px;
   }
+  .search {
+    margin-top: 70px;
+  }
+  
 }
 
-/* .test2 {
-    display: flex;
-    align-items: center;
-    /* justify-content: center; */
-/* justify-content: space-evenly;
-  } */
