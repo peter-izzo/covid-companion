@@ -1,4 +1,5 @@
 import React from "react";
+import moment from "moment";
 import "../index.css";
 
 // Importing Font Awesome Icons
@@ -67,9 +68,8 @@ function CovidInfo({ user }) {
           hidden={user?.tested === "No"}
           className="ph3 pv2 bb b--light-silver tested"
         >
-          {element3} Tested {user?.testDate}(mm/dd/yyyy)
-        </li>{" "}
-        {/*@todo moment for date format */}
+          {element3} Tested {moment(user?.testDate).format("l")}
+        </li>
         <li
           hidden={user?.vaccinated === "No"}
           className="ph3 pv2 bb b--light-silver vaccinated "
@@ -77,92 +77,92 @@ function CovidInfo({ user }) {
           {element5} Vaccinated ({user?.vaccineCo})
         </li>
         <li
-          hidden={
-            (user?.riskLevel === "Age 60+",
-            "Chronic respiratory diseases",
-            "Immunocompromised condition",
-            "Diabetes",
-            "Cardiovascular diseases",
-            "Chronic renal disease")
-          }
+          hidden={user?.riskLevel !== "No preexisting conditions"}
+          //   "Age 60+",
+          //   "Chronic respiratory diseases",
+          //   "Immunocompromised condition",
+          //   "Diabetes",
+          //   "Cardiovascular diseases",
+          //   "Chronic renal disease")
+          // }
           className="ph3 pv2 bb b--light-silver riskLevel-0"
         >
           {element11} Risk Level (0): None
         </li>
         <li
-          hidden={
-            (user?.riskLevel === "No preexising conditions",
-            "Chronic respiratory diseases",
-            "Immunocompromised condition",
-            "Diabetes",
-            "Cardiovascular diseases",
-            "Chronic renal disease")
-          }
+          hidden={user?.riskLevel !== "Age 60+"}
+          //   "No preexising conditions",
+          //   "Chronic respiratory diseases",
+          //   "Immunocompromised condition",
+          //   "Diabetes",
+          //   "Cardiovascular diseases",
+          //   "Chronic renal disease")
+          // }
           className="ph3 pv2 bb b--light-silver  riskLevel-1"
         >
           {element10} Risk Level (1): Low
         </li>
         <li
-          hidden={
-            (user?.riskLevel === "No preexising conditions",
-            "Age 60+",
-            "Immunocompromised condition",
-            "Diabetes",
-            "Cardiovascular diseases",
-            "Chronic renal disease")
-          }
+          hidden={user?.riskLevel !== "Chronic respiratory diseases"}
+          //   "No preexising conditions",
+          //   "Age 60+",
+          //   "Immunocompromised condition",
+          //   "Diabetes",
+          //   "Cardiovascular diseases",
+          //   "Chronic renal disease")
+          // }
           className="ph3 pv2 bb b--light-silver  riskLevel-2"
         >
           {element6} Risk Level (2): Some
         </li>
         <li
-          hidden={
-            (user?.riskLevel === "No preexising conditions",
-            "Age 60+",
-            "Chronic respiratory diseases",
-            "Diabetes",
-            "Cardiovascular diseases",
-            "Chronic renal disease")
-          }
+          hidden={user?.riskLevel !== "Immunocompromised condition"}
+          //   "No preexising conditions",
+          //   "Age 60+",
+          //   "Chronic respiratory diseases",
+          //   "Diabetes",
+          //   "Cardiovascular diseases",
+          //   "Chronic renal disease")
+          // }
           className="ph3 pv2 bb b--light-silver  riskLevel-3"
         >
           {element9} Risk Level (3): Medium
         </li>
         <li
-          hidden={
-            (user?.riskLevel === "No preexising conditions",
-            "Age 60+",
-            "Chronic respiratory diseases",
-            "Immunocompromised condition",
-            "Cardiovascular diseases",
-            "Chronic renal disease")
-          }
+          hidden={user?.riskLevel !== "Diabetes"}
+          //   "No preexising conditions",
+          //   "Age 60+",
+          //   "Chronic respiratory diseases",
+          //   "Immunocompromised condition",
+          //   "Cardiovascular diseases",
+          //   "Chronic renal disease")
+          // }
           className="ph3 pv2 bb b--light-silver  riskLevel-4"
         >
           {element8} Risk Level (4): High
         </li>
         <li
-          hidden={
-            (user?.riskLevel === "No preexising conditions",
-            "Age 60+",
-            "Chronic respiratory diseases",
-            "Immunocompromised condition",
-            "Diabetes",
-            "Chronic renal disease")
-          }
+          hidden={user?.riskLevel !== "Cardiovascular diseases"}
+          // "No preexising conditions",
+          //   "Age 60+",
+          //   "Chronic respiratory diseases",
+          //   "Immunocompromised condition",
+          //   "Diabetes",
+          //   "Chronic renal disease")
+          // }
           className="ph3 pv2 bb b--light-silver  riskLevel-5"
         >
           {element7} Risk Level (5): Very High
         </li>
         <li
-          hidden={
-            (user?.riskLevel === "No preexising conditions",
-            "Age 60+",
-            "Chronic respiratory diseases",
-            "Immunocompromised condition",
-            "Diabetes",
-            "Cardiovascular diseases")
-          }
+          hidden={user?.riskLevel !== "Chronic renal disease"}
+          //   "No preexising conditions",
+          //   "Age 60+",
+          //   "Chronic respiratory diseases",
+          //   "Immunocompromised condition",
+          //   "Diabetes",
+          //   "Cardiovascular diseases")
+          // }
           className="ph3 pv2 bb b--light-silver  riskLevel-6"
         >
           {element12} Risk Level (6): Highest
