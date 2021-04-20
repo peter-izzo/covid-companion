@@ -1,10 +1,9 @@
-export const questions = [
+export const editQuestions = [
   {
     name: "covidStatus",
     type: "boolean",
     prompt: "What is your Covid status?",
     answers: ["Positive (+)", "Negative (-)"],
-    when: (questions) => questions.location,
   },
 
   {
@@ -73,7 +72,7 @@ export const questions = [
   {
     name: "sellYourSoul",
     type: "checkbox",
-    prompt: "Ready to create profile?",
+    prompt: "Ready to update profile?",
     when: (questions) =>
       questions.riskLevel ||
       questions.riskLevel === "No preexisting conditions",

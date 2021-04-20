@@ -3,22 +3,30 @@ import { Auth } from 'aws-amplify';
 import { Link, useLocation } from "react-router-dom";
 import "./navbar.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHouseUser } from "@fortawesome/free-solid-svg-icons";
-import { faSearchPlus } from "@fortawesome/free-solid-svg-icons";
-import { faViruses } from "@fortawesome/free-solid-svg-icons";
+import {
+  faHouseUser,
+  faSearchPlus,
+  faViruses,
+  faSignOutAlt,
+} from "@fortawesome/free-solid-svg-icons";
+import {} from "@fortawesome/free-solid-svg-icons";
+import {} from "@fortawesome/free-solid-svg-icons";
+import { Auth } from "aws-amplify";
 // import { faMap } from "@fortawesome/free-solid-svg-icons";
 //Font awesome icons
 const element = <FontAwesomeIcon icon={faHouseUser} className="f2 pv2" />;
 const elementb = <FontAwesomeIcon icon={faSearchPlus} className="f2 pv2" />;
 const elementc = <FontAwesomeIcon icon={faViruses} className="f2 pv2" />;
-// const elementd = <FontAwesomeIcon icon={faMap} />;
+const elementd = <FontAwesomeIcon icon={faSignOutAlt} className="f2 pv2" />;
+
 function NavBar() {
   const location = useLocation();
-const signOut = () => {
+
+  const signOut = () => {
     Auth.signOut()
-    .then(data => console.log(data))
-    .catch(err => console.log(err));
-  }
+      .then((data) => console.log(data))
+      .catch((err) => console.log(err));
+  };
   return (
     <ul
       className="fixed-bottom-nav flex justify-center list pv2 mv0 fw6"
@@ -68,8 +76,16 @@ const signOut = () => {
       </li>
       {/* signout link */}
       <li className="f6  ph3 ">
-        <button onClick={signOut} className="signOutButton">SignOut</button>
-         
+        <Link
+          onClick={signOut}
+          className={
+            (location.pathname === "/" ? "nav-link active" : "nav-link",
+            "link dim white")
+          }
+        >
+          {elementd}
+          <label className="f6 tc">Log Out</label>
+        </Link>
       </li>
     </ul>
   );
