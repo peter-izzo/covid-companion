@@ -7,10 +7,11 @@ import CovidInfo from "../components/CovidInfo";
 import Navbar from "../components/Navbar/Navbar";
 import Footer from "../components/Footer/Footer";
 import { Auth } from "aws-amplify";
-import axios from "axios"
+import axios from "axios";
+import { AmplifySignOut } from "@aws-amplify/ui-react";
 
 function Profile() {
-  const [userData, setUserData] = useState()
+  const [userData, setUserData] = useState();
   async function getUserData() {
     const user = await Auth.currentAuthenticatedUser();
     axios.get(`http://localhost:3001/profile/${user.attributes.sub}`).then(
@@ -40,6 +41,7 @@ function Profile() {
           </div>
         </article>
         <Navbar />
+        <AmplifySignOut />
         <Footer />
       </div>
     </div>
