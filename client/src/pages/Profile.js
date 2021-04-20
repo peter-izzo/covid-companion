@@ -39,7 +39,7 @@ function Profile() {
           </div>
         </article>
         <Navbar />
-        <AmplifySignOut />
+
         <Footer />
       </div>
     </div>

@@ -1,6 +1,6 @@
 import React from "react";
 // import { Route, useHistory } from "react-router-dom";
-import { Route } from "react-router-dom";
+import { Route, useHistory } from "react-router-dom";
 
 import HomeAbout from "./pages/Home-About";
 // import SignUp from "./pages/SignUp"; @todo delete b/c unsused

@@ -21,9 +21,7 @@ function FriendCircle({friends}) {
         className="dt center w-100 bb b--black-05 pb2 mt2"
         href="#0"
       ></article>{" "}
-      {/* {friends.map((user) => {
-        return <Friend user={user} />;
-      })} */}
+      <Friend />
       
     </main>
   );
