@@ -1,8 +1,8 @@
 import React from "react";
-import Questionnaire from "./Questionnaire";
+import UpdateQuestions from "../components/UpdateQuestions";
 
 export default function UpdateProfile() {
-  // @todo importing to update profile by doing questionnaire
+  // @todo importing to update profile by doing UpdateQuestions
 
   return (
     <div>
@@ -13,7 +13,7 @@ export default function UpdateProfile() {
           your Covid status:
         </h2>
       </div>
-      <Questionnaire />
+      <UpdateQuestions />
     </div>
   );
 }

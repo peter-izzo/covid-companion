@@ -1,5 +1,5 @@
 import { useState, useEffect, useCallback } from "react";
-import { questions } from "../components/questions";
+import { editQuestions } from "../components/editQuestions";
 import { Auth } from "aws-amplify";
 import axios from "axios";
 
@@ -7,7 +7,7 @@ import Question from "../components/Question";
 import "../index.css";
 import { useHistory } from "react-router-dom";
 
-export default function Questionnaire() {
+export default function UpdateQuestions() {
   const history = useHistory();
   // Create initial state object of questions set to empty strings
   const initialValue = () => {
@@ -15,7 +15,7 @@ export default function Questionnaire() {
 
     // const formQuestions = { name: "", location: "" };
 
-    for (let q of questions) {
+    for (let q of editQuestions) {
       formQuestions[q.name] = "";
     }
     return formQuestions;
@@ -41,57 +41,24 @@ export default function Questionnaire() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const user = await Auth.currentAuthenticatedUser();
-    const _id = user.attributes.sub;
-    answers._id = _id;
 
-    axios.post("http://localhost:3001/create", answers).then((res) => {
-      console.log(res);
-      history.push("/profile");
-    });
+    axios
+      .put(`http://localhost:3001/profile/${user.attributes.sub}`, answers)
+      .then((res) => {
+        console.log(res);
+        history.push("/profile");
+      });
     console.log(answers);
   };
 
-  async function getUserData() {
-    const user = await Auth.currentAuthenticatedUser();
-    axios.get(`http://localhost:3001/profile/${user.attributes.sub}`).then(
-      (res) => {
-        console.log(res.data);
-        if (res?.data?.name) {
-          history.push("/profile");
-        }
-      },
-      (error) => {
-        console.log(error);
-      }
-    );
-  }
-
-  useEffect(() => {
-    getUserData();
-  }, []);
-
   return (
-    <div className="Question pa3" style={{ backgroundColor: "green" }}>
-      <h1 className="pa3 br3">Covid Questionnaire</h1>
-      <h2 className="pa3 br3">
-        To create your profile, please answer the following questions about your
-        Covid status:
-      </h2>
+    <div>
       <form
         className="pa3 fw6 br3 shadow-3"
         onSubmit={handleSubmit}
         style={{ backgroundColor: "white" }}
       >
-        <label htmlFor="name">
-          Name
-          <input type="text" name="name" onChange={handleChange} />
-        </label>
-        <label htmlFor="location">
-          Location
-          <input type="text" name="location" onChange={handleChange} />
-        </label>
-
-        {questions.map((q) => {
+        {editQuestions.map((q) => {
           return (
             <Question
               data={answers}
@@ -115,7 +82,7 @@ export default function Questionnaire() {
               color: "white",
             }}
           >
-            Submit
+            Update
           </button>
         )}
       </form>
