@@ -12,6 +12,7 @@ export default function Questionnaire() {
   // Create initial state object of questions set to empty strings
   const initialValue = () => {
     const formQuestions = {};
+
     // const formQuestions = { name: "", location: "" };
 
     for (let q of questions) {
