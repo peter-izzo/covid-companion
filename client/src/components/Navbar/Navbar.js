@@ -84,7 +84,9 @@ function NavBar() {
           }
         >
           {elementd}
-          <label className="f6 tc">Log Out</label>
+          <label className="f6 tc" id="logOutbtn">
+            Logout
+          </label>
         </Link>
       </li>
     </ul>
