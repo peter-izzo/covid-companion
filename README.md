@@ -1,23 +1,31 @@
 # COVID Companion
 
+![covid-title](client/src/imgs/title-covid.png)
+
+![profile-demo](client/src/imgs/profile-covid.png)
+
 ## Description
 
 This is the final project for the UConn Coding Boot Camp.
 
-A React application that...
+Covid Companion is an an app that uses React components, MongoDB, and AWS Amplify to share the most accurate information about each user and lets you share the details of your Covid status.
+
+Have you been trying to make plans with friends but end up cancelling them when you remember that we’re in the middle of a global pandemic? Do you ask yourself, “how do I really know if they’re ‘safe ‘ to be around? Why meet up when I can text, call, or Facetime them from the safety of my home?” Enter Covid Companion.
+
+Each profile displays whether or not that person is Covid positive or negative, whether or not they’re in quarantine and, if so, how long they’ve been in quarantine, whether or not they’ve been tested and, if so, the date of their last test, whether or not they’ve been vaccinated and, if so, which vaccine, and their exposure risk level based on a preexisting condition.
+Being able to see a person’s current Covid status takes the guesswork out of planning pandemic ‘playdates.’ Stop the spread and share your stats.
+
+View the deployed app [here](https://covid-companion21.herokuapp.com/)
 
 ## Table of Contents
 
-- [Goals](#goals)
 - [Technologies Used](#technologies-used)
-- [Instructions](#instructions)
-- [File Structure ](#file-structure)
+- [Wireframe & Webflow](#wireframe-webflow)
+- [MVC Structure ](#mvc-structure)
 - [User Story](#user-story)
 - [Acceptance Criteria](#acceptance-criteria)
 - [Presentation Requirements](#presentation-requirements)
-- [Definitions](#definitions)
 - [Installation](#installation)
-- [Usage](#usage)
 - [Credits](#credits)
 - [Contributors](#contributors)
 - [License](#license)
@@ -34,48 +42,14 @@ A React application that...
 - Amplify (aws)
 - Tachyon
 - Miro
+- Moment
 - Heroku
 
-## File Structure
+## Wireframe & Webflow
 
-### Component Hierarchy
+![miro-still-demo](client/src/imgs/miro-webflow-covid-companion.png)
 
-- App
-  - Container
-  - NavBar
-  - Footer
-    - Home/About
-      - Sign-In
-      - Sign-Up (contains form)
-    - Profile (Signed in home)
-      - SearchBar
-      - AvatarBio
-      - Covid Info
-      - (Covid Statistics - API)
-      - Friend Circle
-        - SingleFriend
-      - ProfileFooter
-        - AddToCircle
-          - SearchBar (aka SearchFriend)
-          - SearchedList
-            - SearchedItem (aka single searched friend)
-        - **EditProfile (page/button to sign-up form)**
-        - ProfileHome (button to profile page/ sign-in home)
-        - Sign-Out (button to home/about page)
-
-### Buttons:
-
-- Sign-In (Home-About)
-  - Sign-In > (SignIn)
-- Sign-Up (Home-About)
-  - Continue > (sign-up form)
-- Upload Image (AvatarBio)
-- AddToCircle (ProfileFooter)
-  - SearchFriends (AddToCircle)
-  - AddFriend + (AddToCircle)
-- EditProfile (ProfileFooter)
-  - Save (EditProfile)
-- ProfileHome (ProfileFooter)
+![miro-demo](client/src/imgs/My-First-Board-Online-Whiteboard.gif)
 
 ### MVC Structure
 
@@ -94,20 +68,23 @@ A React application that...
 |        └── components
 |               ├── AvatarBio.js
 |               ├── CardBtn.js (+)
-|               ├── Container.js
-|               ├── **(ContinueBtn.js)**
 |               ├── CovidInfo.js
+|               ├── editQuestions.js
+|               ├── Friend.js
 |               ├── Footer.js
+|                   ├──── footer.css
+|                   └──── Footer.js
 |               ├── FriendCard.js
 |               ├── FriendCircle.js
 |               ├── Navbar.js
-|               ├── ProfileBtn.js (profile footer btns)
+|                   ├──── navbar.css
+|                   └──── Navbar.js
 |               ├── Question.js
+|               ├── questions.js
 |               ├── SearchBar.js
 |               ├── SearchResults.js
-|               ├── **(SubmitBtn.js)**
-|               ├──
-|               ├──
+|               ├── Title.js
+|               ├── UpdateQuestions.js
 |               ├──
 |               ├──
 |               ├──
@@ -116,22 +93,30 @@ A React application that...
 │        └── pages
 |               ├──── Home-About.js
 |               ├──── Profile.js
-|               ├──── SignIn.js
-|               ├──── SignUp.js
 |               ├──── Questionnaire.js
-|               └──── SearchFriends.js
+|               ├──── SearchFriends.js
+|               └──── UpdateProfile.js
 |
 |        ├── App.js
+|        ├── aws-exports.js
 |        ├── index.js
 |        └── index.css
 |
-├── backend
-|       └── models
-│           └── dbUsers.js
-|       └──utils
-|           └── API.js
-│
+├── amplify
+├── controllers
+│     └── posts.js
+│     └── users.js
+├── models
+│     └── User.js
+├── routes
+│     └── posts.js
+├── scripts
+|     └── seedDB.js
+|
+├── test-formats (raw html formats)
+├── .env
 ├── node_modules
+├── deleteUsers.js
 ├── .gitignore
 ├── (.eslintignore)
 ├── .eslintrc.json
@@ -146,7 +131,7 @@ A React application that...
 
 ### Presentation Requirements
 
-![COVID-Companion](google drive link)
+View the presentation [here](https://docs.google.com/presentation/d/1J1-mffYfRNxUSWVwDAV-BMaHv-8ddj8R5yVRCZolYfs/edit?usp=sharing)
 
 - Elevator pitch: a one minute description of your application
 
@@ -162,9 +147,19 @@ A React application that...
 
 ## Installation
 
+1. Fork repo and run `npm run start` in the root folder to run the frontend and the backend.
+
+![login-demo](client/src/imgs/login-covid.png)
+![profile-2](client/src/imgs/profile1-covid.png)
+
+![demo-mobile](client/src/imgs/update-covid1.png)
+
+![search1](client/src/imgs/search-covid.png)
+![search](client/src/imgs/search-name-covid.png)
+
 ## Credits
 
-- [Miro]()
+- [Miro](https://miro.com/app/board/o9J_lcLWy3k=/)
 - [Tachyon](http://tachyons.io/components/)
 - [Who's at higher risk of serious symptoms](https://www.mayoclinic.org/diseases-conditions/coronavirus/in-depth/coronavirus-who-is-at-risk/art-20483301)
 - [US COVID-19 Risk Level Based on Conditions](https://www.npr.org/sections/health-shots/2020/04/01/824874977/underlying-health-disparities-could-mean-coronavirus-hits-some-communities-harde)
@@ -186,7 +181,7 @@ A React application that...
 [Pete Izzo](https://github.com/peter-izzo)
 [Danny Smooke](https://github.com/dsmooke)
 
-Special thanks to [Chris Bonafacio](https://github.com/chrisbonifacio) and [Nathan Sartain](https://github.com/NatePad) for helping with AWS Amplify and authentication.
+A HUGE special thanks to [Chris Bonafacio](https://github.com/chrisbonifacio) and [Nathan Sartain](https://github.com/NatePad) for helping with AWS Amplify and authentication.
 
 ## License
 
