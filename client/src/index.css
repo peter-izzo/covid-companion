@@ -61,20 +61,44 @@ code {
   color: white;
 }
 
-
+@media (min-width: 300px) {
+  #siteTitle {
+    padding: 30px;
+    margin-bottom: 0px;
+  }
+  #infoIcon {
+    padding-left: 55px;
+    /* margin-left: 5rem !important; */
+  }
+  #friendName {
+    font-size: 18px;
+  }
+}
 
 /*Tablet View*/
 @media (min-width: 767px) {
+  #siteTitle {
+    padding: 40px;
+    margin-bottom: 0px;
+  }
   #infoIcon,
   .ml5 {
     padding-left: 10px;
-    margin-left: 5rem !important;
+    /* margin-left: 5rem !important; */
+  }
+  #navbar {
+    height: 75px !important;
   }
  
 }
 
 /*For Desktop view*/
 @media (min-width: 1025px) {
+  #siteTitle {
+    padding-top: 80px;
+    margin-top: 0px;
+  }
+
   .test {
     margin-left: 200px;
     margin-right: 200px;
@@ -88,19 +112,24 @@ code {
     padding-top: 90px;
   }
   #profile {
-    background-color: rgb(147, 161, 187);
+    /* background-color: rgb(147, 161, 187); */
   }
   #infoIcon {
-    padding-left: 200px;
+    margin-left: 500px;
+    /* padding-left: 200px; */
   }
   #friendImg {
     padding-right: 30px !important;
   }
   #friendName {
-    padding-left: 0px !important;
+    /* padding-left: 0px !important; */
   }
   .friendCard {
     padding: 20px;
+    padding-left: 40px;
+    width: 75%;
+    margin-left: 150px;
+    align-items: center;
   }
   .search {
     margin-top: 70px;

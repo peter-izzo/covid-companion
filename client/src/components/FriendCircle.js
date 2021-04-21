@@ -16,7 +16,12 @@ function FriendCircle({friends}) {
         margin: "20px",
       }}
     >
-      <h3 className="center">Friend Circle</h3>
+      <h3
+        className="center"
+        style={{ fontFamily: "arial", fontSize: "30px", paddingBottom: "0px" }}
+      >
+        Friend Circle
+      </h3>
       <article
         className="dt center w-100 bb b--black-05 pb2 mt2"
         href="#0"
