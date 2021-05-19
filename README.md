@@ -6,8 +6,6 @@
 
 ## Description
 
-This is the final project for the UConn Coding Boot Camp.
-
 Covid Companion is an an app that uses React components, MongoDB, and AWS Amplify to share the most accurate information about each user and lets you share the details of your Covid status.
 
 Have you been trying to make plans with friends but end up cancelling them when you remember that we’re in the middle of a global pandemic? Do you ask yourself, “how do I really know if they’re ‘safe ‘ to be around? Why meet up when I can text, call, or Facetime them from the safety of my home?” Enter Covid Companion.
